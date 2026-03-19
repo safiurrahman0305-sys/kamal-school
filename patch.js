@@ -1,35 +1,41 @@
 window.downloadPDF = function() {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    const doc = new jsPDF('p', 'mm', 'a4');
 
-    // اسکول کا نام اور ہیڈنگ
+    // اسکول کا نام (ہیڈنگ)
     doc.setFontSize(22);
     doc.setFont("helvetica", "bold");
     doc.text("KAMAL EVERGREEN PUBLIC SCHOOL", 105, 20, { align: "center" });
     
+    // فارم کی سرخی
     doc.setFontSize(16);
     doc.text("Student Admission Form", 105, 30, { align: "center" });
 
-    // فارم کے خانے (Tables/Rows)
+    // فارم کے خانے (ڈیٹا)
     doc.setFontSize(12);
     doc.setFont("helvetica", "normal");
     
-    const startY = 50;
-    const rowHeight = 10;
-    const labels = [
-        "Student Name:", "Father Name:", "Father's Occupation:", 
-        "Date of Birth:", "Gender:", "Class for Admission:", 
-        "Previous School (if any):", "Contact Number:", 
-        "Emergency Contact:", "Permanent Address:", "Postal Address:"
+    let yPos = 50;
+    const fields = [
+        "Student Name: __________________________",
+        "Father Name: ___________________________",
+        "Father's Occupation: ____________________",
+        "Date of Birth: _________________________",
+        "Gender: ________________________________",
+        "Class for Admission: ___________________",
+        "Contact Number: ________________________",
+        "Address: _______________________________"
     ];
 
-    labels.forEach((label, index) => {
-        let currentY = startY + (index * rowHeight);
-        doc.rect(15, currentY - 7, 180, rowHeight); // خانہ بنانا
-        doc.line(70, currentY - 7, 70, currentY + 3); // درمیانی لائن
-        doc.text(label, 20, currentY);
+    fields.forEach(field => {
+        doc.text(field, 20, yPos);
+        yPos += 12; // ہر لائن کے درمیان فاصلہ
     });
 
-    // فائل محفوظ کریں
-    doc.save("Kamal-Evergreen-Admission-Form.pdf");
+    // دستخط کا خانہ
+    doc.text("Parent/Guardian Signature: ________________", 20, 160);
+    doc.text("Date: ___________", 150, 160);
+
+    // فائل کو محفوظ کریں (صرف ایک ہی بار)
+    doc.save("Kamal-School-Admission-Form.pdf");
 };
