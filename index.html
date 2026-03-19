@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Evergreen Public School Lakki Marwat | Modern Islamic Education</title>
+    <meta name="description"
+        content="Kamal Evergreen Public School Lakki Marwat offers high-quality modern Islamic education. The best school in Lakki City for traditional values and future skills.">
+    <meta name="keywords"
+        content="Kamal Evergreen Public School Lakki Marwat, Modern Islamic Education, Best School in Lakki City, School in Lakki Marwat, Islamic School">
+    <!-- Meta tags for Social Media Sharing (WhatsApp Preview) -->
+    <meta property="og:title" content="Kamal Evergreen Public School Lakki Marwat | Best School in Lakki City">
+    <meta property="og:description" content="Join Kamal Evergreen Public School for a blend of Modern Science and Islamic Ethics. Building a generation with faith and innovation.">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- html2pdf.js - PDF Generation Library (loaded before all other scripts) -->
+    <!-- Redundant PDF Library Load for safety -->
+    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            950: '#022c22',
+                            900: '#064e3b',
+                            800: '#065f46',
+                            700: '#047857',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        urdu: ['Noto Nastaliq Urdu', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/m-fraz/Jameel-Noori-Nastaleeq-Web/v1.0.0/font.css">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #admission-form {
+            scroll-margin-top: 100px;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(6, 78, 59, 0.95), rgba(6, 78, 59, 0.6));
+        }
+
+        .shaheen-float {
+            animation: shaheen-float 6s ease-in-out infinite;
+        }
+
+        @keyframes shaheen-float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        .urdu-text {
+            font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif;
+            line-height: 2.8;
+        }
+
+        body.ur-active,
+        body.ur-active * {
+            font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif !important;
+            line-height: normal;
+        }
+
+        body.ur-active {
+            line-height: 2.2;
+        }
+
+        /* Scroll Animation - Robust version */
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease-out;
+        }
+
+        /* Only hide if JS is confirmed working */
+        .js-active .reveal:not(.active) {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Smooth Accordion for FAQ */
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #064e3b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Official Admission Form Styles (A4 Optimized) */
+        #admission-form-area, #roll-no-slip-area {
+            background: white !important;
+            color: black !important;
+            padding: 30px;
+            border: 2px solid black;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            max-width: 850px;
+            margin: 20px auto;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        .photo-box-official {
+            width: 110px;
+            height: 130px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 800;
+            background: #fff;
+            padding: 8px;
+            color: black;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Photo upload styles */
+        .photo-upload-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .photo-upload-label .upload-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .photo-upload-label .upload-hint {
+            font-size: 9px;
+            font-weight: 800;
+            color: #555;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .photo-preview-img {
+            width: 110px;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Force student photo to always print */
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .photo-box-official input[type="file"] {
+            display: none;
+        }
+
+        /* Hide upload UI once photo is selected */
+        .photo-box-official.has-photo .photo-upload-label {
+            display: none;
+        }
+
+        @media print {
+            .photo-upload-label { display: none !important; }
+        }
+
+        .admission-table-official {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        .admission-table-official td {
+            border: 2px solid black;
+            padding: 12px 15px;
+            font-size: 13px;
+            color: black !important;
+            vertical-align: middle;
+        }
+
+        .admission-table-official .label-cell {
+            font-weight: 800;
+            background: #fdfdfd;
+            width: 38%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Visual Consistency: Adjust padding/line-height for taller Urdu font to avoid breaking table layout */
+        body.ur-active .admission-table-official td {
+            padding: 8px 15px;
+            font-size: 14px;
+            line-height: normal;
+        }
+
+        .admission-table-official input, 
+        .admission-table-official select, 
+        .admission-table-official textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: black !important;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        @media print {
+            @page { size: A4; margin: 10mm; } /* کاغذ کے چاروں طرف مناسب جگہ */
+            html, body { 
+                height: auto !important; 
+                overflow: visible !important; 
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                /* رنگوں اور بیک گراؤنڈ کو برقرار رکھنے کے لیے */
+                -webkit-print-color-adjust: exact !important;
+            }
+            body > *:not(#admission-form-section):not(#roll-no-slip-section) { 
+                display: none !important; 
+            }
+            header, nav, footer, .ticker-wrap, .no-print, #preloader, [class*="fixed"], [class*="sticky"] { 
+                display: none !important; 
+            }
+
+            /* Toggle between sections */
+            body:not(.print-slip-mode) #roll-no-slip-section { display: none !important; }
+            body.print-slip-mode #admission-form { display: none !important; }
+
+            #admission-form, #roll-no-slip-section { 
+                display: block !important;
+                position: relative !important;
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                background: white !important;
+                opacity: 1 !important;
+                transform: none !important;
+                visibility: visible !important;
+                /* Ensures form starts exactly at the top and avoids creating blank pages */
+                page-break-before: avoid !important;
+                break-before: avoid !important;
+            }
+            
+            #admission-form-area, #roll-no-slip-area { 
+                border: 2px solid black !important;
+                /* admission-form-container کی سیٹنگز */
+                width: 100% !important;
+                max-width: 210mm !important; /* A4 کی چوڑائی */
+                margin: 0 auto !important;
+                padding: 20px !important;
+                box-sizing: border-box !important;
+                /* کٹنے سے بچانے کے لیے */
+                overflow: visible !important;
+                /* فارم کو ایک ہی صفحے پر رکھنے کی کوشش کرتا ہے */
+                page-break-inside: avoid !important;
+                page-break-after: avoid !important;
+                height: auto !important;
+                position: relative !important;
+            }
+            #admission-form-area *, #roll-no-slip-area * { visibility: visible !important; }
+            .admission-table-official td { padding: 8px 12px !important; }
+        }
+
+        .loader-logo {
+            animation: pulse-logo 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-logo {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        /* News Ticker CSS Fix */
+        .ticker-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-text {
+            display: flex;
+            white-space: nowrap;
+            width: max-content;
+            animation: ticker-scroll 30s linear infinite;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(100vw);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .ticker-container:hover .ticker-text {
+            animation-play-state: paused;
+        }
+
+        .lib-download-btn {
+            cursor: not-allowed !important;
+        }
+
+        /* Fade In Up Animation */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dark Mode adjustments */
+        .dark {
+            color-scheme: dark;
+        }
+
+        .dark body {
+            background-color: #0c0a09;
+            color: #f5f5f4;
+        }
+
+        .dark section {
+            background-color: #0c0a09;
+        }
+
+        .dark .bg-white {
+            background-color: #1c1917;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: #0c0a09;
+        }
+
+        .dark .text-gray-900 {
+            color: #f5f5f4 !important;
+        }
+
+        .dark .text-gray-600 {
+            color: #d6d3d1 !important;
+        }
+
+        .dark .text-emerald-950 {
+            color: #f0fdf4 !important;
+        }
+
+        .dark .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .bg-white\/10 {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Educator Card Optimizations */
+        .teacher-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 480px;
+            /* Ensures symmetry in height */
+        }
+
+        .teacher-portrait-container {
+            background-color: #f1f5f9;
+            /* Professional off-white/light grey */
+            background-image: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+        }
+
+        .teacher-portrait {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Precision Fitting: 20% position ensures headroom space */
+            object-position: center 20%;
+            /* Subtle masking to unify diverse backgrounds */
+            filter: contrast(1.05) brightness(1.02);
+            mix-blend-mode: multiply;
+        }
+
+        .teacher-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="text-center">
+            <img src="images/logo.jpg" alt="Loading..."
+                class="w-24 h-24 rounded-full border-4 border-gold-500 loader-logo mb-4">
+            <div class="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gold-500 animate-[loading_2s_ease-in-out_infinite]"></div>
+            </div>
+            <style>
+                @keyframes loading {
+                    0% {
+                        width: 0%;
+                        transform: translateX(-100%);
+                    }
+
+                    50% {
+                        width: 100%;
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        width: 0%;
+                        transform: translateX(100%);
+                    }
+                }
+            </style>
+        </div>
+    </div>
+
+    <!-- Top Header Area (Sticky) -->
+    <header class="fixed top-0 w-full z-[150]">
+        <!-- Top Announcement Bar (Ticker) -->
+        <div
+            class="bg-gold-500 text-emerald-950 py-1.5 px-4 overflow-hidden relative border-b border-emerald-900/10 ticker-container">
+            <div class="ticker-text text-[10px] md:text-xs font-black uppercase tracking-widest">
+                <span class="pr-[50px] flex items-center"><i data-lucide="megaphone" class="w-3 h-3 mr-2"></i> <span
+                        data-t="ticker-1">Welcome to Kamal Evergreen Public School</span></span>
+                <span class="pr-[50px] flex items-center"><i data-lucide="alert-circle" class="w-3 h-3 mr-2"></i> <span
+                        data-t="ticker-2">Limited Seats Available | Contact Office for Details</span></span>
+                <span class="pr-[50px] flex items-center"><i data-lucide="zap" class="w-3 h-3 mr-2"></i> <span
+                        data-t="ticker-3">Join the Best School in Lakki City</span></span>
+                <!-- Repeated for a longer loop if needed, but 3 well-spaced items usually work -->
+                <span class="pr-[50px] flex items-center"><i data-lucide="megaphone" class="w-3 h-3 mr-2"></i> <span
+                        data-t="ticker-1">Welcome to Kamal Evergreen Public School</span></span>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="w-full bg-emerald-950 text-white shadow-xl border-b border-white/5 transition-all duration-300">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="window.location.href='#home'">
+                    <img src="images/logo.jpg" alt="KEPS Logo" loading="lazy"
+                        class="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gold-500 shadow-lg group-hover:rotate-6 transition-transform">
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold leading-none tracking-tight" data-t="school-name">Kamal
+                            Evergreen</h1>
+                        <p class="text-[9px] md:text-[10px] text-gold-400 uppercase tracking-[0.2em] font-semibold"
+                            data-t="school-sub">Public School Lakki Marwat</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" class="lg:hidden p-2 text-gold-500 hover:scale-110 transition-transform">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <ul class="flex items-center space-x-6 font-medium">
+                        <li><a href="#home" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-home">Home<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                        <li><a href="#vision" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-about">About<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                        <li><a href="#transport" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-transport">Transport<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                        <li><a href="#academics" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-academics">Academics<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                        <li><a href="#library" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-library">Library<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                        <li><a href="#admission-form" class="hover:text-gold-400 transition-all duration-300 relative group"
+                                data-t="nav-apply">Apply Now<span
+                                    class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all group-hover:w-full"></span></a>
+                        </li>
+                    </ul>
+                    <div class="flex items-center space-x-3">
+                        <button id="dark-toggle-desktop"
+                            class="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-gold-400 border border-white/10 transition-all">
+                            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                        </button>
+
+                        <button id="lang-toggle-desktop"
+                            class="flex items-center space-x-2 bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-lg border border-white/20 transition-all font-bold min-w-[100px] justify-center text-sm">
+                            <i data-lucide="languages" class="w-4 h-4 text-gold-400"></i>
+                            <span id="lang-text-desktop">اردو</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden lg:hidden bg-emerald-950/95 backdrop-blur-xl border-t border-white/10 absolute w-full left-0 transition-all duration-300">
+                <ul class="flex flex-col p-6 space-y-4 font-medium">
+                    <li><a href="#home" class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-home">Home</a></li>
+                    <li><a href="#vision"
+                            class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-about">About Us</a></li>
+                    <li><a href="#transport"
+                            class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-transport">Transport Facility</a></li>
+                    <li><a href="#academics"
+                            class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-academics">Academics</a></li>
+                    <li><a href="#library"
+                            class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-library">Library</a></li>
+                    <li><a href="#admission-form"
+                            class="block py-2 border-b border-white/5 hover:text-gold-400 transition-colors"
+                            data-t="nav-apply">Apply Now</a></li>
+                    <li class="flex items-center space-x-4 pt-4">
+                        <button id="dark-toggle-mobile"
+                            class="flex-1 flex items-center justify-center space-x-2 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-all text-gold-400">
+                            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                            <span class="text-sm font-bold dark:hidden" data-t="mode-dark">Dark Mode</span>
+                            <span class="text-sm font-bold hidden dark:block" data-t="mode-light">Light Mode</span>
+                        </button>
+                        <button id="lang-toggle-mobile"
+                            class="flex-[1.5] flex items-center justify-center space-x-2 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                            <i data-lucide="languages" class="w-5 h-5 text-gold-400"></i>
+                            <span id="lang-text-mobile" class="text-sm">اردو میں دیکھیں</span>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative min-h-[100vh] flex items-center overflow-hidden pt-[110px] md:pt-[130px] pb-24 md:pb-32">
+        <!-- Hero Background -->
+        <div class="absolute inset-0">
+            <img src="images/hero-1.png" alt="Classroom" loading="lazy" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-emerald-950/85"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+                <!-- Welcome Message -->
+                <div class="flex justify-center mb-12 fade-in-up">
+                    <div
+                        class="bg-gold-500/95 text-emerald-950 px-8 py-2 md:py-3 rounded-full border border-gold-400/50 shadow-2xl backdrop-blur-md flex items-center space-x-3">
+                        <span class="w-2 h-2 bg-emerald-900 rounded-full animate-pulse mr-3 hidden md:block"></span>
+                        <span id="banner-text" class="text-lg md:text-2xl font-bold urdu-text leading-tight">پلے گروپ تا ساتویں جماعت کے لیے بہترین انتخاب</span>
+                    </div>
+                </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+                <!-- Shaheen/Eagle Graphic (Now on the Left in LTR) -->
+                <div class="lg:w-2/5 flex justify-center fade-in-up" style="animation-delay: 0.2s">
+                    <div
+                        class="relative p-2 bg-white rounded-3xl shadow-2xl border-4 border-white/20 scale-100 hover:scale-105 transition-transform duration-500">
+                        <img src="images/shaheen.jpg" alt="Kamal Evergreen School" loading="lazy"
+                            class="w-full max-w-[400px] rounded-2xl shadow-inner">
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5 text-white">
+                    <h2 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight fade-in-up"
+                        data-t="hero-title">
+                        Traditional Values & <br>
+                        <span class="text-gold-500">Future Skills</span>
+                    </h2>
+                    <p class="text-2xl urdu-text text-gold-400 mb-6 font-bold" data-t="hero-slogan">
+                        نکتہ الشہین فی کل طالب علم
+                    </p>
+                    <p class="text-lg md:text-xl mb-10 text-emerald-50 max-w-xl leading-relaxed font-medium"
+                        data-t="hero-desc">
+                        Nurturing the "Shaheen" within every student through high-quality Islamic education and modern
+                        technological mastery.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5 fade-in-up" style="animation-delay: 0.4s">
+                        <a href="#vision"
+                            class="flex items-center justify-center bg-gold-500 text-emerald-950 px-10 py-4 rounded-xl font-black text-lg hover:bg-white hover:scale-105 transition-all shadow-2xl"
+                            data-t="nav-about">
+                            Learn More
+                            <i data-lucide="arrow-right" class="w-6 h-6 ml-3"></i>
+                        </a>
+                        <a href="tel:+923109612200"
+                            class="flex items-center justify-center bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all ltr-keep">
+                            <i data-lucide="phone-call" class="w-6 h-6 mr-3 text-gold-400"></i>
+                            0310-9612200
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Vision -->
+    <section id="vision" class="py-32 bg-gray-50 overflow-hidden relative reveal">
+        <div
+            class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50">
+        </div>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative group">
+                    <div
+                        class="absolute -top-6 -left-6 w-32 h-32 bg-gold-500/10 rounded-full group-hover:scale-110 transition-transform">
+                    </div>
+                    <div
+                        class="relative z-10 border-4 border-white rounded-3xl shadow-2xl overflow-hidden ring-4 ring-gold-500/10">
+                        <img src="images/founder.jpg" alt="Founder" loading="lazy"
+                            class="w-full aspect-[4/5] object-cover filter brightness-[1.02] contrast-[1.05] transition duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-emerald-900/10 rounded-3xl -rotate-12"></div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="vision-badge">
+                        Founder's Vision</h3>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950 mb-8 leading-tight"
+                        data-t="vision-title">Building the Future on <span class="bg-emerald-100 px-2">Strong
+                            Foundations</span></h2>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border-l-4 border-emerald-700">
+                            <p class="text-xl text-gray-700 leading-relaxed mb-6 font-medium" data-t="vision-quote">
+                                "At Kamal Evergreen, we prioritize **Moral & Islamic Training (اخلاقی و اسلامی تربیت)**
+                                alongside modern skills. Our students aren't just learners; they are leaders equipped
+                                with both spiritual wisdom and technological prowess."
+                            </p>
+                            <div class="flex items-center space-x-6">
+                                <div class="w-16 h-px bg-gold-500"></div>
+                                <div>
+                                    <h4 class="font-bold text-emerald-950 text-xl" data-t="founder-name">Asif Kamal</h4>
+                                    <p class="text-sm text-gold-600 font-bold uppercase" data-t="founder-title">Founder
+                                        & Leader (M.Phil Physics)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Message (New) -->
+    <section id="principal" class="py-32 bg-white overflow-hidden relative reveal">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <div class="lg:w-1/2 relative group">
+                    <div
+                        class="absolute -top-6 -right-6 w-32 h-32 bg-emerald-500/10 rounded-full group-hover:scale-110 transition-transform">
+                    </div>
+                    <div
+                        class="relative z-10 border-4 border-white rounded-3xl shadow-2xl overflow-hidden ring-4 ring-emerald-500/10">
+                        <img src="images/principal_noman.jpg" alt="Principal Muhammad Noman" loading="lazy"
+                            class="w-full aspect-[4/5] object-cover object-top filter brightness-[1.02] contrast-[1.05] transition duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-gold-500/10 rounded-3xl rotate-12"></div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-emerald-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm"
+                        data-t="principal-badge">Principal's Message</h3>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950 mb-8 leading-tight"
+                        data-t="principal-title">Empowering Students Through <span class="bg-gold-100 px-2">Science &
+                            Values</span></h2>
+
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border-l-4 border-gold-500">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6" data-t="principal-quote">
+                                "Our commitment is to provide a high-standard academic environment where every student
+                                can excel. We combine the rigorous discipline of Science with the timeless beauty of
+                                Islamic Ethics to shape well-rounded individuals."
+                            </p>
+                            <div class="flex items-center space-x-6">
+                                <div class="w-16 h-px bg-emerald-900"></div>
+                                <div>
+                                    <h4 class="font-bold text-emerald-950 text-xl" data-t="principal-name">Muhammad
+                                        Noman</h4>
+                                    <p class="text-sm text-emerald-600 font-bold uppercase"
+                                        data-t="principal-title-text">Principal (BS Chemistry)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transport Section -->
+    <section id="transport" class="py-32 bg-emerald-950 text-white relative overflow-hidden reveal">
+        <!-- Background Pattern -->
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-emerald-900/40 to-transparent"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-white" data-t="transport-title">Safe
+                        & Reliable <br><span class="text-gold-400">Transport Facility</span></h2>
+                    <p class="text-2xl urdu-text text-emerald-100 mb-8" data-t="transport-urdu-text">انشاءاللہ کمال
+                        ایورگرین سکول ٹرانسپورٹ کی سہولت بھی فراہم کرے گا</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-gold-400 shrink-0">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-t="trans-feat1-title">Safe Travel</h4>
+                                <p class="text-sm text-emerald-300" data-t="trans-feat1-desc">Monitored routes with
+                                    expert drivers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-gold-400 shrink-0">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg" data-t="trans-feat2-title">Punctual</h4>
+                                <p class="text-sm text-emerald-300" data-t="trans-feat2-desc">Regular and timely
+                                    pick-up/drop-off.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tel:+923109612200"
+                        class="inline-flex items-center bg-gold-500 text-emerald-950 px-8 py-4 rounded-xl font-bold hover:bg-white transition-colors ltr-keep"
+                        data-t="trans-btn">
+                        Query Transport
+                        <i data-lucide="truck" class="w-5 h-5 ml-3"></i>
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gold-400/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="images/transport_new.jpg" alt="School Bus" loading="lazy"
+                            class="rounded-3xl shadow-2xl border-4 border-white/10 group-hover:scale-[1.02] transition-transform w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features from Poster -->
+    <section class="py-24 bg-white reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="why-badge">Why
+                    Choose Us</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="why-title">Exceptional
+                    Facilities</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="sun" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 mb-3" data-t="feat1-title">Solar System</h4>
+                    <p class="text-gray-600 text-sm" data-t="feat1-desc">Uninterrupted power for comfortable learning.
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="droplet" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 mb-3" data-t="feat2-title">Filtered Water</h4>
+                    <p class="text-gray-600 text-sm" data-t="feat2-desc">Clean and safe drinking water for all students.
+                    </p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 mb-3" data-t="feat3-title">Expert Teachers</h4>
+                    <p class="text-gray-600 text-sm" data-t="feat3-desc">Qualified staff for modern and Islamic
+                        sciences.</p>
+                </div>
+                <div
+                    class="p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="book-check" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 mb-3" data-t="feat4-title">Monthly Checks</h4>
+                    <p class="text-gray-600 text-sm" data-t="feat4-desc">Regular assessment to monitor student progress.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Faculty Section -->
+    <section id="faculty" class="py-24 bg-gray-50 reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-emerald-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="faculty-sub">Our
+                    Educators</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="faculty-main">Expert
+                    Faculty Members</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Teacher 0 (Principal) -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/principal_noman.jpg" alt="Muhammad Noman" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="principal-name">Muhammad Noman</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4"
+                            data-t="principal-title-label">Principal</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="principal-title-text">Principal (BS
+                            Chemistry)</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 1 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/safi-ur-rehman.jpg" alt="Safi Ur Rehman" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t1-name">Safi Ur Rehman</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t1-qual">MA
+                            Islamic Studies</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t1-desc">Specialist in Islamic
+                            Jurisprudence & Ifta</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 2 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/faisal-ayaz.jpg" alt="Faisal Ayaz" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t2-name">Faisal Ayaz</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t2-qual">
+                            Bachelor in Sociology</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t2-desc">Senior Teacher</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 3 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/muhammad-daniyal.jpg" alt="Muhammad Daniyal" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t3-name">Muhammad Daniyal</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t3-qual">BS
+                            Physics, B.Ed</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t3-desc">Education Administrator & Senior
+                            Teacher</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 4 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/hammad-habib.jpg" alt="Muhammad Hammad Habib" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t4-name">Muhammad Hammad Habib</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t4-qual">
+                            Bachelor of Urdu</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t4-desc">Senior Urdu Teacher | 2 Years
+                            Experience</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 5 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="images/salman-math.jpg" alt="Muhammad Salman" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t5-name">Muhammad Salman</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t5-qual">BS
+                            Mathematics</p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t5-desc">Mathematics Specialist |
+                            University of Peshawar</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 6 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&h=400&auto=format&fit=crop"
+                            alt="Mr. Irfan Ullah" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t6-name">Mr. Irfan Ullah</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t6-qual">M.Sc Physics (B.Ed)
+                        </p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t6-desc">General Science expert with a passion for
+                            experimental learning.</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 7 -->
+                <div
+                    class="teacher-card group h-full bg-white rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-gray-100">
+                    <div class="teacher-portrait-container">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&h=400&auto=format&fit=crop"
+                            alt="Ms. Zainab Jan" loading="lazy"
+                            class="teacher-portrait group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="teacher-info text-center">
+                        <h4 class="text-xl font-bold text-emerald-950 mb-1" data-t="t7-name">Ms. Zainab Jan</h4>
+                        <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-4" data-t="t7-qual">M.A Urdu Literature
+                        </p>
+                        <p class="text-gray-500 text-sm line-clamp-2" data-t="t7-desc">Promoting Urdu literature and national values
+                            among students.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="py-24 bg-white relative overflow-hidden reveal">
+        <!-- Background Elements -->
+        <div
+            class="absolute top-0 left-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-60">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-96 h-96 bg-gold-50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 opacity-50">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="acad-badge">Our
+                    Curriculum</h3>
+                <h2 class="text-4xl md:text-6xl font-serif font-bold text-emerald-950 mb-8 leading-tight"
+                    data-t="acad-title">Academic <span class="text-emerald-800">Excellence</span></h2>
+                <p class="text-lg text-gray-600 leading-relaxed" data-t="acad-desc">
+                    At Kamal Evergreen, we offer a unique blend of **Traditional Islamic Values** and **Modern Academic
+                    Excellence**. Our curriculum is designed to nurture the "Shaheen" in every student, preparing them
+                    for success in both worlds.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Early Years -->
+                <div
+                    class="group bg-white p-10 rounded-[3rem] shadow-xl border border-gray-100 hover:border-emerald-200 transition-all hover:shadow-2xl hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-emerald-100 text-emerald-800 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-500">
+                        <i data-lucide="palette" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-emerald-950 mb-4" data-t="l1-title">Early Years</h4>
+                    <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-6" data-t="l1-range">
+                        Playgroup - Nursery - KG</p>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l1-f1">Activity-based
+                                learning</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l1-f3">Basic Islamic ethics &
+                                Dua</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l1-f4">Social & Motor
+                                skills</span></li>
+                    </ul>
+                </div>
+
+                <!-- Primary Level -->
+                <div
+                    class="group bg-emerald-950 p-10 rounded-[3rem] shadow-xl border border-emerald-900 hover:border-gold-500 transition-all hover:shadow-2xl hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-gold-500 text-emerald-950 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
+                        <i data-lucide="book-open" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-4" data-t="l2-title">Primary Level</h4>
+                    <p class="text-gold-400 font-bold text-xs uppercase tracking-widest mb-6" data-t="l2-range">Class 1
+                        - 5</p>
+                    <ul class="space-y-4 text-emerald-100/80 text-sm">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-gold-500"></i><span data-t="l2-f1">Core: English, Science,
+                                Maths</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-gold-500"></i><span data-t="l2-f2">Basic Computer</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-gold-500"></i><span data-t="l2-f3">Character building
+                                program</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-gold-500"></i><span data-t="l2-f4">Analytical thinking
+                                focus</span></li>
+                    </ul>
+                </div>
+
+                <!-- Middle Level -->
+                <div
+                    class="group bg-white p-10 rounded-[3rem] shadow-xl border border-gray-100 hover:border-emerald-200 transition-all hover:shadow-2xl hover:-translate-y-2">
+                    <div
+                        class="w-20 h-20 bg-emerald-100 text-emerald-800 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-emerald-900 group-hover:text-white transition-colors duration-500">
+                        <i data-lucide="cpu" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-emerald-950 mb-4" data-t="l3-title">Middle Level</h4>
+                    <p class="text-gold-600 font-bold text-xs uppercase tracking-widest mb-6" data-t="l3-range">Class 6
+                        - 7</p>
+                    <ul class="space-y-4 text-gray-600 text-sm">
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l3-f1">Advance Science
+                                Concepts</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l3-f2">Basic Computer</span>
+                        </li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l3-f3">Islamic History &
+                                Ethics</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 mr-3 text-emerald-600"></i><span data-t="l3-f4">Project-based
+                                learning</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Unique Feature Banner -->
+            <div
+                class="mt-20 p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-r from-emerald-900 via-emerald-800 to-emerald-900 text-white shadow-2xl relative overflow-hidden group">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-gold-400 opacity-10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-125 transition-transform duration-700">
+                </div>
+                <div class="flex flex-col md:flex-row items-center justify-between relative z-10 gap-8">
+                    <div class="flex items-center gap-8">
+                        <div
+                            class="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-gold-400 shrink-0 border border-white/20">
+                            <i data-lucide="shield-check" class="w-10 h-10"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-2xl font-serif font-bold mb-2" data-t="dual-supervision">Dual Supervision
+                                Excellence</h5>
+                            <p class="text-emerald-100/80 max-w-xl" data-t="dual-super-desc">
+                                Our classes are supervised by **Skilled Ulama** who are experts in both religious
+                                knowledge and modern academic sciences.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#vision"
+                        class="bg-gold-500 text-emerald-950 px-8 py-4 rounded-xl font-black hover:bg-white transition-colors flex items-center shadow-lg"
+                        data-t="btn-learn">
+                        Learn More
+                        <i data-lucide="chevron-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Structure Section (New) -->
+    <section id="fees" class="py-24 bg-gray-50 reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="fee-badge">
+                    Investment in Future</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="fee-title">Fee Structure
+                    2026-27</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-emerald-100 mb-10">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-emerald-950 text-white">
+                                <th class="p-6 md:p-8 font-bold uppercase tracking-wider text-sm" data-t="fee-class">
+                                    Class / Level</th>
+                                <th class="p-6 md:p-8 font-bold uppercase tracking-wider text-sm"
+                                    data-t="fee-admission">Admission Fee</th>
+                                <th class="p-6 md:p-8 font-bold uppercase tracking-wider text-sm" data-t="fee-monthly">
+                                    Monthly Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-emerald-50/50 transition-colors">
+                                <td class="p-6 md:p-8 font-bold text-emerald-950" data-t="fee-r1">Playgroup to KG</td>
+                                <td class="p-6 md:p-8 font-black text-gold-600" data-t="fee-v1">Rs. 1,000</td>
+                                <td class="p-6 md:p-8 font-black text-emerald-800" data-t="fee-v2">Rs. 1,500</td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/50 transition-colors">
+                                <td class="p-6 md:p-8 font-bold text-emerald-950" data-t="fee-r2">Grade 1 to 5</td>
+                                <td class="p-6 md:p-8 font-black text-gold-600" data-t="fee-v3">Rs. 1,500</td>
+                                <td class="p-6 md:p-8 font-black text-emerald-800" data-t="fee-v4">Rs. 1,800</td>
+                            </tr>
+                            <tr class="hover:bg-emerald-50/50 transition-colors">
+                                <td class="p-6 md:p-8 font-bold text-emerald-950" data-t="fee-r3">Grade 6 to 7</td>
+                                <td class="p-6 md:p-8 font-black text-gold-600" data-t="fee-v5">Rs. 2,000</td>
+                                <td class="p-6 md:p-8 font-black text-emerald-800" data-t="fee-v6">Rs. 2,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between gap-6 p-8 bg-emerald-900 rounded-[2rem] text-white shadow-xl">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gold-500/20 rounded-xl flex items-center justify-center text-gold-400">
+                            <i data-lucide="info"></i>
+                        </div>
+                        <p class="font-bold text-sm md:text-base" data-t="fee-discount">Brother/Sister discount
+                            available (20%)</p>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center bg-white text-emerald-900 px-8 py-3 rounded-xl font-black text-sm hover:bg-gold-500 hover:text-emerald-950 transition-all">
+                        <i data-lucide="file-text" class="mr-2 w-4 h-4"></i>
+                        <span data-t="fee-policy">Download Fee Policy (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Admission Form Section -->
+    <section id="admission-form" class="py-24 bg-gray-100 reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 no-print">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="form-badge">Official Form</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="form-title-official">Student Admission</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <form id="admissionForm">
+                <div id="admission-form-area">
+                    <!-- Flex Header to prevent overlap -->
+                    <div class="flex justify-between items-start gap-8 mb-8 border-b-2 border-black pb-6">
+                        <div class="flex-1 text-center">
+                            <h1 class="text-2xl md:text-3xl font-black text-black mb-1 uppercase tracking-tighter" data-t="form-header-official">KAMAL EVERGREEN PUBLIC SCHOOL</h1>
+                            <h2 class="text-lg md:text-xl font-bold text-black border-b border-black inline-block px-4 pb-1" data-t="form-title-official">STUDENT ADMISSION FORM</h2>
+                            <div class="flex justify-center mt-4">
+                                <img src="images/logo.jpg" alt="School Logo" class="w-20 h-20 rounded-full border-2 border-black shadow-sm">
+                            </div>
+                        </div>
+                        <!-- Photo Box with Upload -->
+                        <div class="photo-box-official" id="form-photo-box">
+                            <label class="photo-upload-label" for="student-photo-input" title="Click to upload student photo">
+                                <span class="upload-icon">📷</span>
+                                <span class="upload-hint" data-t="photo-label-official">PASTE STUDENT PHOTO HERE</span>
+                                <span style="font-size:8px;color:#888;margin-top:2px;" data-t="photo-sub-label">(Click to Upload)</span>
+                            </label>
+                            <input type="file" id="student-photo-input" accept="image/*" onchange="handlePhotoUpload(event)">
+                            <!-- Preview image (hidden until photo selected) -->
+                            <img id="form-photo-preview" class="photo-preview-img" src="" alt="Student Photo" style="display:none;">
+                        </div>
+                    </div>
+
+                    <!-- Main Data Table (11 Fields) -->
+                    <table class="admission-table-official">
+                        <tr>
+                            <td class="label-cell" data-t="l-name">Student Name</td>
+                            <td><input type="text" name="student_name" placeholder="Enter Student Name" data-t="ph-name" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-fname">Father Name</td>
+                            <td><input type="text" name="father_name" placeholder="Enter Father's Name" data-t="ph-fname" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-focc">Father's Occupation</td>
+                            <td><input type="text" name="father_occupation" placeholder="Enter Father's Occupation" data-t="ph-focc" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-dob">Date of Birth</td>
+                            <td><input type="date" name="dob" data-t="ph-dob" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-gender">Gender</td>
+                            <td>
+                                <select name="gender" required>
+                                    <option value="Male" data-t="gen-m">Male</option>
+                                    <option value="Female" data-t="gen-f">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-class">Class for Admission</td>
+                            <td>
+                                <select name="admission_class" required>
+                                    <option value="PG" data-t="cl-pg">Playgroup</option>
+                                    <option value="Nur" data-t="cl-nur">Nursery</option>
+                                    <option value="Prep" data-t="cl-prep">Prep</option>
+                                    <option value="1" data-t="cl-1">Grade 1</option>
+                                    <option value="2" data-t="cl-2">Grade 2</option>
+                                    <option value="3" data-t="cl-3">Grade 3</option>
+                                    <option value="4" data-t="cl-4">Grade 4</option>
+                                    <option value="5" data-t="cl-5">Grade 5</option>
+                                    <option value="6" data-t="cl-6">Grade 6</option>
+                                    <option value="7" data-t="cl-7">Grade 7</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-prev">Previous School (if any)</td>
+                            <td><input type="text" name="previous_school" placeholder="Enter Previous School" data-t="ph-prev"></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-phone">Contact Number</td>
+                            <td><input type="text" name="contact" placeholder="Enter Contact Number" data-t="ph-phone" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-emerg">Emergency Contact</td>
+                            <td><input type="text" name="emergency" placeholder="Enter Emergency Contact" data-t="ph-emerg" required></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-perm">Permanent Address</td>
+                            <td><textarea name="permanent_address" rows="2" placeholder="Enter Permanent Address" data-t="ph-perm" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell" data-t="l-post">Postal Address</td>
+                            <td><textarea name="postal_address" rows="2" placeholder="Enter Postal Address" data-t="ph-post" required></textarea></td>
+                        </tr>
+                    </table>
+
+                    <!-- Signature & Office Section -->
+                    <div class="mt-6">
+                        <table class="admission-table-official">
+                            <tr>
+                                <td class="w-1/2 p-6 text-center border-2 border-black">
+                                    <div class="h-10 border-b border-dashed border-gray-400 mb-2"></div>
+                                    <span class="font-bold text-[10px] uppercase" data-t="sig-parent">Parent/Guardian Signature</span>
+                                </td>
+                                <td class="w-1/2 p-6 text-center border-2 border-black">
+                                    <div class="h-10 border-b border-dashed border-gray-400 mb-2"></div>
+                                    <span class="font-bold text-[10px] uppercase" data-t="sig-date">Date</span>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <div class="mt-2 border-2 border-black p-4 bg-gray-50">
+                            <h4 class="font-black text-[10px] uppercase mb-4 text-center tracking-widest border-b border-black pb-1 inline-block mx-auto" data-t="office-title">School Office Use Only</h4>
+                            <div class="flex justify-center items-center space-x-12 py-1">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 border border-black"></div>
+                                    <span class="text-[10px] font-black uppercase" data-t="adm-approved">Admission Approved</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-6 h-6 border border-black"></div>
+                                    <span class="text-[10px] font-black uppercase" data-t="adm-not">Not Approved</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-6 mt-12 no-print">
+                    <button type="submit" class="bg-emerald-700 text-white px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-800 transition-all shadow-2xl active:scale-95">
+                        <i data-lucide="send" class="w-6 h-6 mr-3"></i>
+                        <span data-t="btn-submit">Submit Form</span>
+                    </button>
+                    <button type="button" onclick="window.print()" class="bg-gold-500 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-white transition-all shadow-2xl active:scale-95">
+                        <i data-lucide="printer" class="w-6 h-6 mr-3"></i>
+                        <span data-t="btn-print">Print Form</span>
+                    </button>
+                    <button type="button" onclick="downloadAdmissionPDF()" class="bg-white border-2 border-emerald-950 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-50 transition-all shadow-2xl active:scale-95">
+                        <i data-lucide="download" class="w-6 h-6 mr-3"></i>
+                        <span data-t="btn-download-pdf">Download PDF</span>
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Academic Calendar Section (New) -->
+    <section id="calendar" class="py-24 bg-white reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-emerald-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="cal-badge">Mark
+                    Your Dates</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="cal-title">Academic
+                    Calendar 2026-27</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Date 1 -->
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-emerald-500/30 transition-all hover:shadow-xl group">
+                    <div class="text-gold-600 font-black text-xs uppercase tracking-widest mb-4 flex items-center">
+                        <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                        <span data-t="cal-t1">April 1, 2026</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 leading-tight" data-t="cal-d1">New Academic Session
+                        Begins</h4>
+                </div>
+                <!-- Date 2 -->
+                <div
+                    class="p-8 rounded-[2.5rem] bg-emerald-950 text-white border border-emerald-900 shadow-2xl hover:scale-105 transition-all">
+                    <div class="text-gold-400 font-black text-xs uppercase tracking-widest mb-4 flex items-center">
+                        <i data-lucide="sun" class="w-4 h-4 mr-2"></i>
+                        <span data-t="cal-t2">June 15 - August 14</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white leading-tight" data-t="cal-d2">Summer Vacations</h4>
+                </div>
+                <!-- Date 3 -->
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-emerald-500/30 transition-all hover:shadow-xl group">
+                    <div class="text-gold-600 font-black text-xs uppercase tracking-widest mb-4 flex items-center">
+                        <i data-lucide="clipboard-list" class="w-4 h-4 mr-2"></i>
+                        <span data-t="cal-t3">October 10 - 20</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 leading-tight" data-t="cal-d3">Mid-Term Examinations
+                    </h4>
+                </div>
+                <!-- Date 4 -->
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-emerald-500/30 transition-all hover:shadow-xl group">
+                    <div class="text-gold-600 font-black text-xs uppercase tracking-widest mb-4 flex items-center">
+                        <i data-lucide="snowflake" class="w-4 h-4 mr-2"></i>
+                        <span data-t="cal-t4">Dec 25 - Jan 5</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 leading-tight" data-t="cal-d4">Winter Break</h4>
+                </div>
+                <!-- Date 5 -->
+                <div
+                    class="p-8 rounded-[2.5rem] bg-gold-500 text-emerald-950 border border-gold-400 shadow-xl hover:scale-105 transition-all">
+                    <div class="text-emerald-900 font-black text-xs uppercase tracking-widest mb-4 flex items-center">
+                        <i data-lucide="award" class="w-4 h-4 mr-2"></i>
+                        <span data-t="cal-t5">March 10, 2027</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-emerald-950 leading-tight" data-t="cal-d5">Final Result
+                        Announcement</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Library Section -->
+    <section id="library" class="py-32 bg-white reveal relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl opacity-50 -mr-32 -mt-32">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="lib-badge">Evergreen
+                    Publications</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="lib-title">Digital
+                    Library & Guides</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Islamic Studies -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center">
+                            <i data-lucide="book-type"></i>
+                        </div>
+                        <h4 class="font-bold text-emerald-950 uppercase tracking-wider text-sm" data-t="cat-islamic">
+                            Islamic Studies</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-tajweed">Basic Tajweed Guide</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-duas">Daily Duas for Students</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Excellence -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <h4 class="font-bold text-emerald-950 uppercase tracking-wider text-sm" data-t="cat-academic">
+                            Academic Excellence</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-papers">Model Papers 2026</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-syllabus">Syllabus Breakup</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-homework">Monthly Home Work</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Skills -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h4 class="font-bold text-emerald-950 uppercase tracking-wider text-sm" data-t="cat-future">
+                            Future Skills</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-ai">Introduction to AI</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-computer">Computer Basics Guide
+                            </h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- For Parents -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center">
+                            <i data-lucide="users-2"></i>
+                        </div>
+                        <h4 class="font-bold text-emerald-950 uppercase tracking-wider text-sm" data-t="cat-parents">For
+                            Parents</h4>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-gold-500 transition-all group">
+                            <h5 class="font-bold text-emerald-950 mb-4" data-t="guide-parentcom">Parent-Teacher
+                                Communication Guide</h5>
+                            <a href="javascript:void(0)" onclick="showLibraryAlert()"
+                                class="lib-download-btn flex items-center text-xs font-black text-emerald-700 hover:text-gold-600 transition-colors uppercase tracking-widest">
+                                <i data-lucide="download-cloud" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                                <span data-t="btn-download">Download PDF</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="faq-badge">Got
+                    Questions?</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="faq-title">Frequently
+                    Asked Questions</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6 mb-10"></div>
+
+                <!-- FAQ Search Bar -->
+                <div class="max-w-md mx-auto relative group">
+                    <i data-lucide="search"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-gold-500 transition-colors"></i>
+                    <input type="text" placeholder="Search for questions..."
+                        class="w-full pl-12 pr-6 py-4 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:border-gold-500 focus:bg-white transition-all text-sm shadow-sm"
+                        data-t="faq-search">
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item group border border-gray-100 rounded-3xl bg-gray-50 overflow-hidden reveal">
+                    <button
+                        class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-emerald-50 transition-colors">
+                        <span class="font-bold text-emerald-950" data-t="faq-q1">What are the school timings?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-emerald-50/30">
+                        <p class="p-6 text-sm text-gray-600 leading-relaxed border-t border-emerald-100/50"
+                            data-t="faq-a1">
+                            Our standard school hours are from 8:00 AM to 1:30 PM (Monday - Thursday) and 8:00 AM to
+                            12:00 PM on Fridays. Playgroup timings may vary slightly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div
+                    class="faq-item group border border-gray-100 rounded-3xl bg-gray-50 overflow-hidden reveal text-right">
+                    <button
+                        class="w-full p-6 text-right flex justify-between items-center bg-white hover:bg-emerald-50 transition-colors">
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform"></i>
+                        <span class="font-bold text-emerald-950 urdu-text" style="line-height: 1.5" data-t="faq-q2">کیا
+                            اسکول میں دینی تعلیم کا خاص انتظام ہے؟</span>
+                    </button>
+                    <div class="faq-content bg-emerald-50/30">
+                        <p class="p-6 text-sm text-gray-600 leading-relaxed border-t border-emerald-100/50 urdu-text"
+                            style="line-height:2" data-t="faq-a2">
+                            جی بالکل! کمال ایورگرین میں حفظِ قرآن، ناظرہ مع تجوید اور بنیادی دینی مسائل کی تعلیم ماہر
+                            علمائے کرام کی نگرانی میں دی جاتی ہے۔
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div
+                    class="faq-item group border border-gray-100 rounded-3xl bg-gray-50 overflow-hidden reveal text-left">
+                    <button
+                        class="w-full p-6 text-left flex justify-between items-center bg-white hover:bg-emerald-50 transition-colors">
+                        <span class="font-bold text-emerald-950" data-t="faq-q3">Is transport available for all areas in
+                            Lakki Marwat?</span>
+                        <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content bg-emerald-50/30 text-left">
+                        <p class="p-6 text-sm text-gray-600 leading-relaxed border-t border-emerald-100/50"
+                            data-t="faq-a3">
+                            Yes, we provide transport services spanning across major areas of Lakki City and surrounding
+                            localities. Please contact our office for specific route details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (New) -->
+    <section id="testimonials" class="py-24 bg-emerald-950 text-white reveal relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h3 class="text-gold-400 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="test-badge">Parent
+                    Testimonials</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white" data-t="test-title">What Our Community
+                    Says</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto overflow-hidden relative">
+                <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full shrink-0 px-4">
+                        <div class="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 text-center">
+                            <i data-lucide="quote" class="w-12 h-12 text-gold-500 mx-auto mb-8 opacity-50"></i>
+                            <p class="text-xl md:text-2xl font-serif italic mb-8 leading-relaxed" data-t="test-quote1">
+                                "Great environment for kids. The balance between Islamic values and modern education is
+                                exactly what we were looking for."</p>
+                            <h4 class="font-bold text-gold-400 text-lg">Ahmad Khan</h4>
+                            <p class="text-xs text-emerald-300 uppercase tracking-widest mt-1">Father of Grade 3 Student
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="w-full shrink-0 px-4">
+                        <div class="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 text-center">
+                            <i data-lucide="quote" class="w-12 h-12 text-gold-500 mx-auto mb-8 opacity-50"></i>
+                            <p class="text-xl md:text-2xl font-serif italic mb-8 leading-relaxed" data-t="test-quote2">
+                                "Best Islamic and modern education mix in Lakki City. The faculty is very professional
+                                and dedicated."</p>
+                            <h4 class="font-bold text-gold-400 text-lg">Sadia Bibi</h4>
+                            <p class="text-xs text-emerald-300 uppercase tracking-widest mt-1">Mother of KG Student</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="w-full shrink-0 px-4">
+                        <div class="bg-white/5 backdrop-blur-md p-10 rounded-[3rem] border border-white/10 text-center">
+                            <i data-lucide="quote" class="w-12 h-12 text-gold-500 mx-auto mb-8 opacity-50"></i>
+                            <p class="text-xl md:text-2xl font-serif italic mb-8 leading-relaxed" data-t="test-quote3">
+                                "The facilities like solar power and filtered water show the school's commitment to
+                                student comfort and health."</p>
+                            <h4 class="font-bold text-gold-400 text-lg">Muhammad Irfan</h4>
+                            <p class="text-xs text-emerald-300 uppercase tracking-widest mt-1">Local Resident</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-12 space-x-3">
+                <button onclick="moveTestimonial(0)"
+                    class="test-dot w-3 h-3 rounded-full bg-gold-500 transition-all"></button>
+                <button onclick="moveTestimonial(1)"
+                    class="test-dot w-3 h-3 rounded-full bg-white/20 transition-all"></button>
+                <button onclick="moveTestimonial(2)"
+                    class="test-dot w-3 h-3 rounded-full bg-white/20 transition-all"></button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Roll No Slip Section (Hidden by default, shown on submission success) -->
+    <section id="roll-no-slip-section" class="py-24 bg-white reveal hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 no-print">
+                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="roll-badge">Online Entry</h3>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="roll-title-main">Roll No Slip</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+            </div>
+
+            <div id="roll-no-slip-area">
+                <!-- Flex Header -->
+                <div class="flex justify-between items-start gap-8 mb-8 border-b-2 border-black pb-6">
+                    <div class="w-[110px] invisible no-print hidden md:block"></div>
+                    
+                    <div class="flex-1 text-center">
+                        <h1 class="text-xl md:text-3xl font-black text-black mb-1 uppercase tracking-tighter" data-t="roll-header">KAMAL EVERGREEN PUBLIC SCHOOL</h1>
+                        <h2 class="text-lg md:text-xl font-bold text-black border-b border-black inline-block px-4 pb-1" data-t="roll-title">Roll No Slip</h2>
+                        <div class="flex justify-center mt-4">
+                            <img src="images/logo.jpg" alt="School Logo" class="w-20 h-20 rounded-full border-2 border-black shadow-sm">
+                        </div>
+                    </div>
+
+                    <!-- Photo Box on Roll No Slip (auto-populated from form upload) -->
+                    <div class="photo-box-official" id="slip-photo-box">
+                        <img id="slip-photo-preview" class="photo-preview-img" src="" alt="Student Photo" style="display:none;">
+                        <span id="slip-photo-placeholder" class="upload-hint" data-t="photo-label-official">PASTE STUDENT PHOTO HERE</span>
+                    </div>
+                </div>
+
+                <!-- Slip Table -->
+                <table class="admission-table-official">
+                    <tr>
+                        <td class="label-cell" data-t="l-roll-no">Roll No.</td>
+                        <td><input type="text" id="slip-roll-no" readonly placeholder="[OFFICE USE]" data-t="slip-office"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell" data-t="l-name">Student Name:</td>
+                        <td><input type="text" id="slip-name" readonly placeholder="Enter Name" data-t="slip-ph-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell" data-t="l-fname">Father Name:</td>
+                        <td><input type="text" id="slip-fname" readonly placeholder="Enter Father's Name" data-t="slip-ph-fname"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell" data-t="l-class">Class for Admission:</td>
+                        <td><input type="text" id="slip-class" readonly placeholder="Enter Class" data-t="slip-ph-class"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell" data-t="l-phone">Contact Number:</td>
+                        <td><input type="text" id="slip-phone" readonly placeholder="Enter Phone" data-t="slip-ph-phone"></td>
+                    </tr>
+                </table>
+
+                <!-- Principal Sign -->
+                <div class="mt-12 text-right">
+                    <p class="font-black text-sm uppercase" data-t="principal-sign">Principal Sign___________</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap justify-center gap-6 mt-12 no-print">
+                <button type="button" onclick="printRollNoSlip()" class="bg-gold-500 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-900 hover:text-white transition-all shadow-2xl active:scale-95">
+                    <i data-lucide="printer" class="w-6 h-6 mr-3"></i>
+                    <span data-t="btn-print-slip">Print Roll No Slip</span>
+                </button>
+                <button type="button" onclick="downloadSlipPDF()" class="bg-white border-2 border-emerald-950 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-50 transition-all shadow-2xl active:scale-95">
+                    <i data-lucide="download" class="w-6 h-6 mr-3"></i>
+                    <span data-t="btn-download-pdf">Download PDF</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white pt-24 pb-12 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-30">
+        </div>
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <!-- Brand Info -->
+                <div class="lg:col-span-1 border-b border-white/5 pb-10 lg:border-none">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <img src="images/logo.jpg" alt="Logo" class="w-16 h-16 rounded-full border-2 border-gold-500">
+                        <div>
+                            <h2 class="text-xl font-bold leading-none" data-t="school-name">Kamal Evergreen</h2>
+                            <p class="text-[10px] text-gold-400 uppercase tracking-widest mt-1"
+                                data-t="footer-school-sub">Public School</p>
+                        </div>
+                    </div>
+                    <p class="text-emerald-100/60 text-sm leading-relaxed mb-8" data-t="footer-desc">
+                        Creating a generation that leads with both faith and innovation. Lakki Marwat's premier
+                        educational institution.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16K6FgymHs/" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-gold-500 hover:text-emerald-950 transition-all border border-white/10"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-gold-500 hover:text-emerald-950 transition-all border border-white/10"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-gold-500 hover:text-emerald-950 transition-all border border-white/10"><i
+                                data-lucide="youtube" class="w-5 h-5"></i></a>
+                        <a href="https://wa.me/923109612200" target="_blank"
+                            class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all border border-white/10"><i
+                                data-lucide="message-circle" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-8"
+                        data-t="footer-nav-title">Quick Navigation</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#home"
+                                class="text-emerald-100/70 hover:text-white hover:translate-x-2 transition-all flex items-center"><i
+                                    data-lucide="chevron-right" class="w-4 h-4 mr-2 text-gold-500/50"></i> <span
+                                    data-t="nav-home">Home</span></a></li>
+                        <li><a href="#vision"
+                                class="text-emerald-100/70 hover:text-white hover:translate-x-2 transition-all flex items-center"><i
+                                    data-lucide="chevron-right" class="w-4 h-4 mr-2 text-gold-500/50"></i> <span
+                                    data-t="nav-about">Our Vision</span></a></li>
+                        <li><a href="#academics"
+                                class="text-emerald-100/70 hover:text-white hover:translate-x-2 transition-all flex items-center"><i
+                                    data-lucide="chevron-right" class="w-4 h-4 mr-2 text-gold-500/50"></i> <span
+                                    data-t="nav-academics">Academics</span></a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div>
+                    <h4 class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-8"
+                        data-t="footer-contact-title">Contact Us</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <i data-lucide="phone" class="w-5 h-5 text-gold-500 mt-1 shrink-0"></i>
+                            <div class="text-sm">
+                                <p class="text-white font-bold tracking-tight text-base">0310-9612200</p>
+                                <p class="text-emerald-100/60 uppercase text-[10px] font-black mt-1"
+                                    data-t="footer-office">Primary Office</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gold-500 mt-1 shrink-0"></i>
+                            <p class="text-sm text-emerald-100/70 leading-relaxed italic" data-t="footer-address">Gul
+                                Wali Abad, Lakki City, Lakki Marwat</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location Map -->
+                <div class="bg-emerald-900/50 p-6 rounded-3xl border border-white/5">
+                    <h4 class="text-gold-400 font-bold uppercase tracking-widest text-xs mb-6"
+                        data-t="footer-map-title">Find Us on Map</h4>
+                    <div class="rounded-2xl overflow-hidden h-32 mb-4 border border-white/10 grayscale">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106655.85871783034!2d70.83543163359376!3d32.6105307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e789c683b5665b%3A0xc348574971c0800!2sLakki%20Marwat%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                    <p class="text-[10px] text-emerald-200/50 italic">Lakki Marwat City, KPK</p>
+                </div>
+            </div>
+
+            <div
+                class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[11px] text-emerald-500/60 font-medium uppercase tracking-widest gap-4">
+                <p data-t="footer-copy">© 2026 Kamal Evergreen Public School. All Rights Reserved.</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-white transition-colors" data-t="footer-privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors" data-t="footer-terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+
+
+        // Language Translation Logic
+        const translations = {
+            ur: {
+                "nav-home": "ہوم",
+                "nav-about": "ہمارے بارے میں",
+                "nav-transport": "ٹرانسپورٹ",
+                "nav-academics": "تعلیمی نظام",
+                "nav-apply": "ابھی داخلہ لیں",
+                "nav-home": "ہوم",
+                "hero-badge": "داخلے جاری ہیں: پلے گروپ تا ساتویں جماعت",
+                "hero-title": "روایتی اقدار اور <br> <span class='text-gold-500'>جدید مہارتیں</span>",
+                "hero-slogan": "نکتہ الشہین فی کل طالب علم",
+                "hero-desc": "اعلیٰ معیار کی اسلامی تعلیم اور جدید ٹیکنالوجی کے ذریعے ہر طالب علم کے اندر موجود 'شاہین' کی پرورش کرنا۔",
+                "apply-btn": "آن لائن داخلہ فارم",
+                "vision-badge": "بانی کا وژن",
+                "vision-title": "مضبوط بنیادوں پر <span class='bg-emerald-100 px-2'>مستقبل کی تعمیر</span>",
+                "vision-quote": "\"کمال ایورگرین میں ہم جدید مہارتوں کے ساتھ ساتھ اخلاقی اور اسلامی تربیت کو ترجیح دیتے ہیں۔ ہمارے طلباء صرف سیکھنے والے نہیں بلکہ روحانی بصیرت اور تکنیکی مہارت رکھنے والے لیڈر ہیں۔\"",
+                "founder-name": "آصف کمال",
+                "founder-title": "بانی و سربراہ (ایم فل فزکس)",
+                "principal-badge": "پرنسپل کا پیغام",
+                "principal-title": "سائنس اور اقدار کے ذریعے <span class='bg-gold-100 px-2'>طلباء کی بااختیاری</span>",
+                "principal-quote": "\"ہمارا عزم ایک اعلیٰ تعلیمی ماحول فراہم کرنا ہے جہاں ہر طالب علم بہترین کارکردگی دکھا سکے۔ ہم سائنس کے نظم و ضبط کو اسلامی اخلاقیات کی خوبصورتی کے ساتھ ملا کر ایک مکمل شخصیت تیار کرتے ہیں۔\"",
+                "principal-name": "محمد نعمان",
+                "principal-title-text": "پرنسپل (BS کیمسٹری)",
+                "transport-title": "محفوظ اور قابلِ اعتماد <br><span class='text-gold-400'>ٹرانسپورٹ کی سہولت</span>",
+                "transport-urdu-text": "انشاءاللہ کمال ایورگرین سکول ٹرانسپورٹ کی سہولت بھی فراہم کرے گا",
+                "trans-feat1-title": "محفوظ سفر",
+                "trans-feat1-desc": "ماہر ڈرائیورز اور نگرانی کے ساتھ مخصوص راستے۔",
+                "trans-feat2-title": "وقت کی پابندی",
+                "trans-feat2-desc": "باقاعدگی اور وقت پر پک اینڈ ڈراپ۔",
+                "trans-btn": "ٹرانسپورٹ کی معلومات",
+                "why-badge": "ہمیں کیوں منتخب کریں؟",
+                "why-title": "بہترین سہولیات",
+                "feat1-title": "سولر سسٹم",
+                "feat1-desc": "تعلیمی تسلسل کے لیے مسلسل بجلی کی فراہمی۔",
+                "feat2-title": "فلٹر شدہ پانی",
+                "feat2-desc": "طلباء کے لیے صاف اور محفوظ پینے کا پانی۔",
+                "feat3-title": "ماہر اساتذہ",
+                "feat3-desc": "جدید اور دینی علوم کے لیے کوالیفائیڈ سٹاف۔",
+                "feat4-title": "ماہانہ رپورٹ",
+                "feat4-desc": "طلباء کی کارکردگی کا باقاعدگی سے معائنہ۔",
+                "acad-badge": "ہمارا نصاب",
+                "acad-title": "تعلیمی <span class='text-emerald-800'>فضیلت</span>",
+                "acad-desc": "کمال ایورگرین میں، ہم جدید تعلیمی معیار اور اسلامی اقدار کا بہترین امتزاج پیش کرتے ہیں۔",
+                "l1-title": "ابتدائی سال",
+                "l1-range": "پلے گروپ - نرسری - کے جی",
+                "l1-f1": "ایکٹیویٹی بیسڈ لرننگ",
+                "l1-f3": "بنیادی اسلامی اخلاقیات و دعائیں",
+                "l1-f4": "سماجی و حرکی مہارتیں",
+                "l2-title": "پرائمری لیول",
+                "l2-range": "پہلی سے پانچویں جماعت",
+                "l2-f1": "بنیادی مضامین: انگلش، سائنس، ریاضی",
+                "l2-f2": "بنیادی کمپیوٹر",
+                "l2-f3": "کردار سازی کا پروگرام",
+                "l2-f4": "تجزیاتی سوچ پر توجہ",
+                "l3-title": "مڈل لیول",
+                "l3-range": "چھٹی سے ساتویں جماعت",
+                "l3-f1": "جدید سائنسی تصورات",
+                "l3-f2": "بنیادی کوڈنگ اور مصنوعی ذہانت",
+                "l3-f3": "اسلامی تاریخ اور اخلاقیات",
+                "l3-f4": "پراجیکٹ بیسڈ لرننگ",
+
+                "nav-library": "لائبریری",
+                "lib-badge": "ایورگرین مطبوعات",
+                "lib-title": "ڈیجیٹل لائبریری اور گائیڈز",
+                "cat-islamic": "اسلامی تعلیمات",
+                "cat-academic": "تعلیمی مہارت",
+                "cat-future": "جدید مہارتیں",
+                "cat-parents": "والدین کے لیے",
+                "guide-tajweed": "بنیادی تجوید گائیڈ",
+                "guide-duas": "طلباء کے لیے روزانہ کی دعائیں",
+                "guide-papers": "ماڈل پیپرز 2026",
+                "guide-syllabus": "نصاب کی تفصیل",
+                "guide-homework": "ماہانہ ہوم ورک",
+                "guide-ai": "مصنوعی ذہانت (AI) کا تعارف",
+                "guide-computer": "کمپیوٹر کے بنیادی اصول",
+                "guide-parentcom": "والدین اور اساتذہ کے درمیان رابطے کی گائیڈ",
+                "btn-download": "پی ڈی ایف ڈاؤن لوڈ کریں",
+
+                "faq-badge": "سوالات ہیں؟",
+                "faq-title": "عام طور پر پوچھے جانے والے سوالات",
+                "faq-search": "سوالات تلاش کریں...",
+                "faq-q1": "اسکول کے اوقات کیا ہیں؟",
+                "faq-a1": "ہمارے اسکول کے معمول کے اوقات صبح 8:00 بجے سے دوپہر 1:30 بجے تک (پیر سے جمعرات) اور 8:00 سے 12:00 جمعہ تک ہیں۔ پلے گروپ کے اوقات تھوڑے مختلف ہو سکتے ہیں۔",
+                "faq-q2": "کیا اسکول میں دینی تعلیم کا خاص انتظام ہے؟",
+                "faq-a2": "جی بالکل! کمال ایورگرین میں حفظِ قرآن، ناظرہ مع تجوید اور بنیادی دینی مسائل کی تعلیم ماہر علمائے کرام کی نگرانی میں دی جاتی ہے۔",
+                "faq-q3": "کیا لکی مروت کے تمام علاقوں کے لیے ٹرانسپورٹ دستیاب ہے؟",
+                "faq-a3": "جی ہاں، ہم لکی سٹی اور آس پاس کے بڑے علاقوں میں ٹرانسپورٹ کی سہولت فراہم کرتے ہیں۔ روٹ کی تفصیلات کے لیے ہمارے آفس سے رابطہ کریں۔",
+                "t1-name": "صفی الرحمٰن",
+                "t1-qual": "ایم اے اسلامیات",
+                "t1-desc": "مفتی و ماہر فقہ اسلامی۔",
+                "t2-name": "فیصل ایاز",
+                "t2-qual": "بیچلرز ان سوشیالوجی",
+                "t2-desc": "سینئر استاد۔",
+                "t3-name": "محمد دانیال",
+                "t3-qual": "بی ایس فزکس، بی ایڈ",
+                "t3-desc": "تعلیمی ایڈمنسٹریٹر اور سینئر استاد۔",
+                "t4-name": "محمد حماد حبیب",
+                "t4-qual": "بیچلرز آف اردو",
+                "t4-desc": "سینئر استادِ اردو | 2 سالہ تجربہ۔",
+                "t5-name": "محمد سلمان",
+                "t5-qual": "بی ایس میتھ میٹکس",
+                "t5-desc": "ماہرِ ریاضی | یونیورسٹی آف پشاور",
+                "fee-badge": "مستقبل میں سرمایہ کاری",
+                "fee-title": "فیس کا ڈھانچہ 2026-27",
+                "fee-class": "کلاس / درجہ",
+                "fee-admission": "داخلہ فیس",
+                "fee-monthly": "ماہانہ فیس",
+                "fee-discount": "بہن بھائیوں کے لیے رعایت دستیاب ہے (20٪)",
+                "fee-policy": "فیس پالیسی ڈاؤن لوڈ کریں (PDF)",
+                "cal-badge": "اہم تاریخیں نوٹ کریں",
+                "cal-title": "تعلیمی کیلنڈر 2026-27",
+                "cal-d1": "نیا تعلیمی سیشن شروع",
+                "cal-d2": "موسم گرما کی تعطیلات",
+                "cal-d3": "وسط مدتی امتحانات",
+                "cal-d4": "موسم سرما کی تعطیلات",
+                "cal-d5": "حتمی نتائج کا اعلان",
+                "test-badge": "والدین کی رائے",
+                "test-title": "ہمارا کمیونٹی کیا کہتی ہے",
+                "test-quote1": "\"بچوں کے لیے بہترین ماحول۔ اسلامی اقدار اور جدید تعلیم کا توازن وہی ہے جس کی ہمیں تلاش تھی۔\"",
+                "test-quote2": "\"لکی سٹی میں بہترین اسلامی اور جدید تعلیم کا امتزاج۔ اساتذہ بہت پیشہ ور اور محنتی ہیں۔\"",
+                "test-quote3": "\"سولر پاور اور فلٹر شدہ پانی جیسی سہولیات اسکول کی طلباء کی سہولت اور صحت سے لگاؤ کو ظاہر کرتی ہیں۔\"",
+
+                "ticker-1": "کمال ایورگرین پبلک سکول میں خوش آمدید",
+                "ticker-2": "محدود نشستیں دستیاب ہیں - معلومات کے لیے دفتر سے رابطہ کریں",
+                "ticker-3": "لکی سٹی کے بہترین اسکول میں شامل ہوں",
+                "lang-desktop": "English",
+                "lang-mobile": "English میں دیکھیں",
+                "wa-tooltip": "دفتر سے رابطہ کریں",
+                "form-badge": "آفیشل فارم",
+                "photo-sub-label": "(اپ لوڈ کرنے کے لیے کلک کریں)",
+                "roll-badge": "آن لائن اندراج",
+                "roll-title-main": "رول نمبر سلپ",
+                "slip-office": "[صرف دفتری استعمال]",
+                "slip-ph-name": "نام درج کریں",
+                "slip-ph-fname": "والد کا نام درج کریں",
+                "slip-ph-class": "کلاس درج کریں",
+                "slip-ph-phone": "فون نمبر درج کریں",
+                "photo-label-official": "طالب علم کی تصویر یہاں چسپاں کریں",
+                "form-header-official": "کمال ایورگرین پبلک سکول",
+                "form-title-official": "طالب علم داخلہ فارم",
+                "l-name": "طالب علم کا نام",
+                "l-fname": "والد کا نام",
+                "l-focc": "والد کا پیشہ",
+                "l-dob": "تاریخِ پیدائش",
+                "l-gender": "جنس",
+                "gen-m": "مرد",
+                "gen-f": "خواتین",
+                "l-class": "کلاس جس کے لیے درخواست ہے",
+                "l-prev": "سابقہ اسکول (اگر کوئی ہو)",
+                "l-phone": "رابطہ نمبر",
+                "l-emerg": "ہنگامی رابطہ نمبر",
+                "l-perm": "مستقل پتہ",
+                "l-post": "ڈاک کا پتہ",
+                "sig-parent": "والدین/سرپرست کے دستخط",
+                "sig-date": "تاریخ",
+                "office-title": "صرف دفتری استعمال کے لیے",
+                "adm-approved": "داخلہ منظور",
+                "adm-not": "نا منظور",
+                "btn-submit": "فارم جمع کریں",
+                "btn-print": "پرنٹ کریں",
+                "btn-download-pdf": "پی ڈی ایف ڈاؤن لوڈ کریں",
+
+                "roll-header": "کمال ایورگرین پبلک سکول",
+                "roll-title": "رول نمبر سلپ",
+                "l-roll-no": "رول نمبر",
+                "principal-sign": "پرنسپل کے دستخط___________",
+                "btn-print-slip": "رول نمبر سلپ پرنٹ کریں",
+                "cl-7": "ساتویں جماعت",
+                "ph-name": "طالب علم کا نام درج کریں",
+                "ph-fname": "والد کا نام درج کریں",
+                "ph-focc": "والد کا پیشہ درج کریں",
+                "ph-dob": "تاریخِ پیدائش درج کریں",
+                "ph-prev": "سابقہ اسکول درج کریں",
+                "ph-phone": "رابطہ نمبر درج کریں",
+                "ph-emerg": "ہنگامی رابطہ نمبر درج کریں",
+                "ph-perm": "مستقل پتہ درج کریں",
+                "ph-post": "ڈاک کا پتہ درج کریں",
+                "t6-name": "مسٹر عرفان اللہ",
+                "t6-qual": "ایم ایس سی فزکس (بی ایڈ)",
+                "t6-desc": "جنرل سائنس کے ماہر مع تجربہ۔",
+                "t7-name": "مسز زینب جان",
+                "t7-qual": "ایم اے اردو لٹریچر",
+                "t7-desc": "طالب علموں میں اردو ادب کا فروغ۔",
+                "fee-r1": "پلے گروپ تا کے جی",
+                "fee-r2": "پہلی سے پانچویں جماعت",
+                "fee-r3": "چھٹی سے ساتویں جماعت",
+                "alert-success": "فارم واٹس ایپ پر بھیج دیا گیا ہے! براہ کرم واٹس ایپ پر 'سینڈ' پر کلک کریں تاکہ درخواست مکمل ہو سکے۔"
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-about": "About",
+                "nav-transport": "Transport",
+                "nav-academics": "Academics",
+                "nav-library": "Library",
+                "nav-apply": "Apply Now",
+                "nav-search": "Search",
+                "school-name": "Kamal Evergreen",
+                "school-sub": "Public School Lakki Marwat",
+                "footer-school-sub": "Public School",
+                "faculty-sub": "Our Educators",
+                "faculty-main": "Expert Faculty Members",
+                "dual-supervision": "Dual Supervision Excellence",
+                "dual-super-desc": "Our classes are supervised by Skilled Ulama who are experts in both religious knowledge and modern academic sciences.",
+                "btn-learn": "Learn More",
+                "principal-title-label": "Principal",
+                "side-call": "Call/WhatsApp",
+                "mode-dark": "Dark Mode",
+                "mode-light": "Light Mode",
+                "cl-pg": "Playgroup",
+                "cl-nur": "Nursery",
+                "cl-prep": "Prep",
+                "cl-1": "Grade 1",
+                "cl-2": "Grade 2",
+                "cl-3": "Grade 3",
+                "cl-4": "Grade 4",
+                "cl-5": "Grade 5",
+                "cl-6": "Grade 6",
+                "cl-7": "Grade 7",
+                "hero-badge": "Premium Islamic & Modern Education",
+                "vision-badge": "Founder's Vision",
+                "vision-title": "Building the Future on <span class='bg-emerald-100 px-2'>Strong Foundations</span>",
+                "vision-quote": "\"At Kamal Evergreen, we prioritize Moral & Islamic Training alongside modern skills.\"",
+                "founder-name": "Asif Kamal",
+                "founder-title": "Founder & Leader (M.Phil Physics)",
+                "principal-badge": "Principal's Message",
+                "principal-title": "Empowering Students Through <span class='bg-gold-100 px-2'>Science & Values</span>",
+                "principal-quote": "\"Our commitment is to provide a high-standard academic environment where every student can excel.\"",
+                "principal-name": "Muhammad Noman",
+                "principal-title-text": "Principal (BS Chemistry)",
+                "transport-title": "Safe & Reliable <br><span class='text-gold-400'>Transport Facility</span>",
+                "transport-urdu-text": "انشاءاللہ کمال ایورگرین سکول ٹرانسپورٹ کی سہولت بھی فراہم کرے گا",
+                "trans-feat1-title": "Safe Travel",
+                "trans-feat1-desc": "Monitored routes with expert drivers.",
+                "trans-feat2-title": "Punctual",
+                "trans-feat2-desc": "Regular and timely pick-up/drop-off.",
+                "trans-btn": "Query Transport",
+                "why-badge": "Why Choose Us",
+                "why-title": "Exceptional Facilities",
+                "feat1-title": "Solar System",
+                "feat1-desc": "Uninterrupted power for comfortable learning.",
+                "feat2-title": "Filtered Water",
+                "feat2-desc": "Clean and safe drinking water for all students.",
+                "feat3-title": "Expert Teachers",
+                "feat3-desc": "Qualified staff for modern and Islamic sciences.",
+                "feat4-title": "Monthly Checks",
+                "feat4-desc": "Regular assessment to monitor student progress.",
+                "acad-badge": "Our Curriculum",
+                "acad-title": "Academic <span class='text-emerald-800'>Excellence</span>",
+                "acad-desc": "At Kamal Evergreen, we offer a unique blend of Traditional Islamic Values and Modern Academic Excellence.",
+                "l1-title": "Early Years",
+                "l1-range": "Playgroup - Nursery - KG",
+                "l1-f1": "Activity-based learning",
+                "l1-f3": "Basic Islamic ethics & Dua",
+                "l1-f4": "Social & Motor skills",
+                "l2-title": "Primary Level",
+                "l2-range": "Class 1 - 5",
+                "l2-f1": "Core: English, Science, Maths",
+                "l2-f2": "Basic Computer",
+                "l2-f3": "Character building program",
+                "l2-f4": "Analytical thinking focus",
+                "l3-title": "Middle Level",
+                "l3-range": "Class 6 - 7",
+                "l3-f1": "Advance Science Concepts",
+                "l3-f2": "Basic Coding & AI Literacy",
+                "l3-f3": "Islamic History & Ethics",
+                "l3-f4": "Project-based learning",
+
+                "nav-library": "Library",
+                "lib-badge": "Evergreen Publications",
+                "lib-title": "Digital Library & Guides",
+                "cat-islamic": "Islamic Studies",
+                "cat-academic": "Academic Excellence",
+                "cat-future": "Future Skills",
+                "cat-parents": "For Parents",
+                "faq-badge": "Got Questions?",
+                "faq-title": "Frequently Asked Questions",
+                "faq-search": "Search for questions...",
+                "faq-q1": "What are the school timings?",
+                "faq-a1": "Our standard school hours are from 8:00 AM to 1:30 PM (Monday - Thursday) and 8:00 AM to 12:00 PM on Fridays.",
+                "faq-q2": "Is religious education prioritized?",
+                "faq-a2": "Yes, we provide specialized Hifz-ul-Quran and Nazra programs supervised by expert Ulama.",
+                "faq-q3": "Is transport available for all areas in Lakki Marwat?",
+                "faq-a3": "Yes, we provide transport services across major areas of Lakki City and surrounding localities.",
+                "t1-name": "Safi Ur Rehman",
+                "t1-qual": "MA Islamic Studies",
+                "t1-desc": "Specialist in Islamic Jurisprudence & Ifta.",
+                "t2-name": "Faisal Ayaz",
+                "t2-qual": "Bachelor in Sociology",
+                "t2-desc": "Senior Teacher",
+                "t3-name": "Muhammad Daniyal",
+                "t3-qual": "BS Physics, B.Ed",
+                "t3-desc": "Education Administrator & Senior Teacher",
+                "t4-name": "Muhammad Hammad Habib",
+                "t4-qual": "Bachelor of Urdu",
+                "t4-desc": "Senior Urdu Teacher | 2 Years Experience",
+                "t5-name": "Muhammad Salman",
+                "t5-qual": "BS Mathematics",
+                "t5-desc": "Mathematics Specialist | University of Peshawar",
+                "fee-badge": "Investment in Future",
+                "fee-title": "Fee Structure 2026-27",
+                "fee-class": "Class / Level",
+                "fee-admission": "Admission Fee",
+                "fee-monthly": "Monthly Fee",
+                "fee-discount": "Brother/Sister discount available (20%)",
+                "fee-policy": "Download Fee Policy (PDF)",
+                "cal-badge": "Mark Your Dates",
+                "cal-title": "Academic Calendar 2026-27",
+                "cal-d1": "New Academic Session Begins",
+                "cal-d2": "Summer Vacations",
+                "cal-d3": "Mid-Term Examinations",
+                "cal-d4": "Winter Break",
+                "cal-d5": "Final Result Announcement",
+                "test-badge": "Parent Testimonials",
+                "test-title": "What Our Community Says",
+                "test-quote1": "\"Great environment for kids. The balance between Islamic values and modern education is exactly what we were looking for.\"",
+                "test-quote2": "\"Best Islamic and modern education mix in Lakki City. The faculty is very professional and dedicated.\"",
+                "test-quote3": "\"The facilities like solar power and filtered water show the school's commitment to student comfort and health.\"",
+                "form-badge": "Official Form",
+                "photo-sub-label": "(Click to Upload)",
+                "roll-badge": "Online Entry",
+                "roll-title-main": "Roll No Slip",
+                "slip-office": "[OFFICE USE]",
+                "slip-ph-name": "Enter Name",
+                "slip-ph-fname": "Enter Father's Name",
+                "slip-ph-class": "Enter Class",
+                "slip-ph-phone": "Enter Phone",
+                "photo-label-official": "PASTE STUDENT PHOTO HERE",
+                "form-header-official": "KAMAL EVERGREEN PUBLIC SCHOOL",
+                "form-title-official": "STUDENT ADMISSION FORM",
+                "l-name": "Student Name",
+                "l-fname": "Father Name",
+                "l-focc": "Father's Occupation",
+                "l-dob": "Date of Birth",
+                "l-gender": "Gender",
+                "gen-m": "Male",
+                "gen-f": "Female",
+                "l-class": "Class for Admission",
+                "l-prev": "Previous School (if any)",
+                "l-phone": "Contact Number",
+                "l-emerg": "Emergency Contact",
+                "l-perm": "Permanent Address",
+                "l-post": "Postal Address",
+                "sig-parent": "Parent/Guardian Signature",
+                "sig-date": "Date",
+                "office-title": "School Office Use Only",
+                "adm-approved": "Admission Approved",
+                "adm-not": "Not Approved",
+                "btn-submit": "Submit Form",
+                "btn-print": "Print Form",
+                "btn-download-pdf": "Download PDF",
+
+                "roll-header": "KAMAL EVERGREEN PUBLIC SCHOOL",
+                "roll-title": "Roll No Slip",
+                "l-roll-no": "Roll No.",
+                "principal-sign": "Principal Sign___________",
+                "btn-print-slip": "Print Roll No Slip",
+                "hero-title": "Traditional Values & <br> <span class='text-gold-500'>Modern Skills</span>",
+                "hero-slogan": "The Eagle's Vision in Every Student",
+                "hero-desc": "Nurturing the 'Shaheen' within every student through high-quality Islamic education and modern technological mastery.",
+                "guide-tajweed": "Basic Tajweed Guide",
+                "guide-duas": "Daily Duas for Students",
+                "guide-papers": "Model Papers 2026",
+                "guide-syllabus": "Curriculum Details",
+                "guide-homework": "Monthly Home Work",
+                "guide-ai": "Introduction to AI",
+                "guide-computer": "Computer Basics Guide",
+                "guide-parentcom": "Parent-Teacher Communication Guide",
+                "transport-urdu-text": "InshaAllah, Kamal Evergreen School will provide transport facilities.",
+
+                "ticker-1": "Welcome to Kamal Evergreen Public School",
+                "ticker-2": "Limited Seats Available | Contact Office for Details",
+                "ticker-3": "Join the Best School in Lakki City",
+                "lang-desktop": "اردو",
+                "lang-mobile": "اردو میں دیکھیں",
+                "wa-tooltip": "Chat with School Office",
+                "fee-v1": "Rs. 1,000",
+                "fee-v2": "Rs. 1,500",
+                "fee-v3": "Rs. 1,500",
+                "fee-v4": "Rs. 1,800",
+                "fee-v5": "Rs. 2,000",
+                "fee-v6": "Rs. 2,500",
+                "cal-t1": "April 1, 2026",
+                "cal-t2": "June 15 - August 14",
+                "cal-t3": "October 10 - 20",
+                "cal-t4": "Dec 25 - Jan 5",
+                "cal-t5": "March 10, 2027",
+                "footer-desc": "Creating a generation that leads with both faith and innovation. Lakki Marwat's premier educational institution.",
+                "footer-nav-title": "Quick Navigation",
+                "footer-contact-title": "Contact Us",
+                "footer-office": "Primary Office",
+                "footer-address": "Gul Wali Abad, Lakki City, Lakki Marwat",
+                "footer-map-title": "Find Us on Map",
+                "footer-copy": "© 2026 Kamal Evergreen Public School. All Rights Reserved.",
+                "footer-privacy": "Privacy Policy",
+                "footer-terms": "Terms of Service",
+                "ph-name": "Enter Student Name",
+                "ph-fname": "Enter Father's Name",
+                "ph-focc": "Enter Father's Occupation",
+                "ph-dob": "Enter Date of Birth",
+                "ph-prev": "Enter Previous School",
+                "ph-phone": "Enter Contact Number",
+                "ph-emerg": "Enter Emergency Contact",
+                "ph-perm": "Enter Permanent Address",
+                "ph-post": "Enter Postal Address",
+                "t6-name": "Mr. Irfan Ullah",
+                "t6-qual": "M.Sc Physics (B.Ed)",
+                "t6-desc": "General Science expert with a passion for experimental learning.",
+                "t7-name": "Ms. Zainab Jan",
+                "t7-qual": "M.A Urdu Literature",
+                "t7-desc": "Promoting Urdu literature and national values among students.",
+                "fee-r1": "Playgroup to KG",
+                "fee-r2": "Grade 1 to 5",
+                "fee-r3": "Grade 6 to 7",
+                "alert-success": "Form Submitted to WhatsApp! Please click 'Send' on WhatsApp to complete your application."
+            }
+        };
+
+        let currentLang = 'en';
+
+        const setLanguage = (lang) => {
+            currentLang = lang;
+            
+            // Bidirectional Support
+            // Set direction and document fonts while avoiding interference
+            if (lang === 'ur') {
+                document.documentElement.dir = 'rtl';
+                document.body.style.fontFamily = "'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', serif";
+                document.body.classList.add('ur-active');
+            } else {
+                document.documentElement.dir = 'ltr';
+                document.body.style.fontFamily = "'Montserrat', sans-serif";
+                document.body.classList.remove('ur-active');
+            }
+
+            // Centralized DOM Update using the translations object
+            document.querySelectorAll('[data-t]').forEach(el => {
+                const key = el.getAttribute('data-t');
+                const translation = translations[lang][key];
+                
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else if (el.tagName === 'OPTION') {
+                        el.text = translation;
+                    } else {
+                        el.innerHTML = translation;
+                    }
+                }
+            });
+
+            // Update Toggle Buttons
+            document.getElementById('lang-text-desktop').innerText = translations[lang === 'en' ? 'en' : 'ur']['lang-desktop'];
+            document.getElementById('lang-text-mobile').innerText = translations[lang === 'en' ? 'en' : 'ur']['lang-mobile'];
+
+            // Banner Text Translation Logic
+            // Banner Text Translation & Responsive Size Logic
+            const bannerText = document.getElementById('banner-text');
+            if (bannerText) {
+                if (lang === 'en') {
+                    bannerText.innerText = 'The Best Choice from Playgroup to Grade 7';
+                    bannerText.classList.remove('text-lg', 'md:text-2xl');
+                    bannerText.classList.add('text-sm', 'md:text-base'); // Size reduced for English
+                } else {
+                    bannerText.innerText = 'پلے گروپ تا ساتویں جماعت کے لیے بہترین انتخاب';
+                    bannerText.classList.remove('text-sm', 'md:text-base');
+                    bannerText.classList.add('text-lg', 'md:text-2xl');
+                }
+            }
+
+            // Save preference
+            localStorage.setItem('school_lang', lang);
+
+            // Keep phone numbers LTR for clean formatting
+            document.querySelectorAll('.ltr-keep').forEach(el => {
+                el.dir = 'ltr';
+                el.style.textAlign = 'left';
+            });
+        };
+
+        const toggleLanguage = () => {
+            setLanguage(currentLang === 'en' ? 'ur' : 'en');
+        };
+
+        document.getElementById('lang-toggle-desktop').addEventListener('click', toggleLanguage);
+        document.getElementById('lang-toggle-mobile').addEventListener('click', toggleLanguage);
+
+        // Dark Mode Logic
+        const setDarkMode = (isDark) => {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            localStorage.setItem('school_mode', isDark ? 'dark' : 'light');
+        }
+
+        const toggleDarkMode = () => {
+            const isDark = !document.documentElement.classList.contains('dark');
+            setDarkMode(isDark);
+        }
+
+        document.getElementById('dark-toggle-desktop').addEventListener('click', toggleDarkMode);
+        document.getElementById('dark-toggle-mobile').addEventListener('click', toggleDarkMode);
+
+        // Load saved mode
+        const savedMode = localStorage.getItem('school_mode');
+        if (savedMode === 'dark' || (!savedMode && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDarkMode(true);
+        }
+
+        // Confirm JS is working for animations
+        document.body.classList.add('js-active');
+
+        // Initialize Language
+        const savedLang = localStorage.getItem('school_lang');
+        setLanguage(savedLang || currentLang);
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Scroll Reveal Reveal Animation
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', reveal);
+        reveal(); // Initial check
+
+        // Smooth close mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+
+
+
+
+
+
+        // Testimonial Scroll
+        let currentSlide = 0;
+        const moveTestimonial = (index) => {
+            currentSlide = index;
+            const slider = document.getElementById('testimonial-slider');
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            const dots = document.querySelectorAll('.test-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-gold-500', i === index);
+                dot.classList.toggle('bg-white/20', i !== index);
+                dot.classList.toggle('w-8', i === index);
+            });
+        }
+
+
+
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            moveTestimonial(currentSlide);
+        }, 5000);
+
+        // Initial state for dots
+        if (document.querySelectorAll('.test-dot').length > 0) {
+            document.querySelectorAll('.test-dot')[0].classList.add('w-8');
+        }
+
+        // Library Construction Alert
+        const showLibraryAlert = () => {
+            const msgs = {
+                en: "Coming Soon! We are currently updating our digital library. These guides will be available shortly. Insha'Allah.",
+                ur: "معذرت خواہ ہیں! ڈیجیٹل لائبریری کے اس حصے پر ابھی کام جاری ہے۔ جلد ہی تمام گائیڈز یہاں دستیاب ہوں گی۔ ان شاء اللہ"
+            };
+            alert(msgs[currentLang] || msgs.en);
+        };
+
+        // --- PDF Helper: ensures html2pdf is loaded then calls the callback ---
+        const withHtml2Pdf = (callback) => {
+            if (typeof html2pdf === 'function') {
+                callback();
+            } else {
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+                script.onload = () => { callback(); };
+                script.onerror = () => {
+                    alert('PDF library could not be loaded. Please check your internet connection and try again.');
+                };
+                document.head.appendChild(script);
+            }
+        };
+
+        // --- Photo Upload Handler ---
+        let uploadedPhotoDataURL = null;
+
+        const handlePhotoUpload = (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            if (file.size > 2097152) {
+                alert('File size exceeds the 2MB limit. Please upload a smaller image.');
+                event.target.value = '';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                uploadedPhotoDataURL = e.target.result;
+
+                // Show preview on Admission Form photo box
+                const formPreview = document.getElementById('form-photo-preview');
+                const formBox = document.getElementById('form-photo-box');
+                formPreview.src = uploadedPhotoDataURL;
+                formPreview.style.display = 'block';
+                formBox.classList.add('has-photo');
+
+                // Mirror the same photo to the Roll No Slip photo box
+                const slipPreview = document.getElementById('slip-photo-preview');
+                const slipPlaceholder = document.getElementById('slip-photo-placeholder');
+                const slipBox = document.getElementById('slip-photo-box');
+                slipPreview.src = uploadedPhotoDataURL;
+                slipPreview.style.display = 'block';
+                if (slipPlaceholder) slipPlaceholder.style.display = 'none';
+                slipBox.classList.add('has-photo');
+            };
+            reader.readAsDataURL(file);
+        };
+
+        const downloadAdmissionPDF = () => {
+            if (typeof html2pdf !== 'function') {
+                alert("PDF library is still loading. Please wait a few seconds and try again.");
+                return;
+            }
+            
+            // Visual confirmation for user
+            alert("Starting Download... Please wait 2-3 seconds for the PDF to generate.");
+            
+            const element = document.getElementById('admission-form-area');
+            if (!element) {
+                alert("Error: Form area not found.");
+                return;
+            }
+
+            // Hide the upload label for clean PDF output
+            const uploadLabel = element.querySelector('.photo-upload-label');
+            if (uploadLabel) uploadLabel.style.display = 'none';
+
+            const opt = {
+                margin:       10,
+                filename:     'Admission-Form.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, logging: false },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restore upload label after PDF generated
+                if (uploadLabel) uploadLabel.style.display = '';
+            }).catch((err) => {
+                console.error("PDF Error:", err);
+                if (uploadLabel) uploadLabel.style.display = '';
+                alert("There was an error generating the PDF. Please try again.");
+            });
+        };
+
+        const downloadSlipPDF = () => {
+            withHtml2Pdf(() => {
+                const element = document.getElementById('roll-no-slip-area');
+                const opt = {
+                    margin:       10,
+                    filename:     'Roll_No_Slip.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true, logging: false },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(element).save();
+            });
+        };
+
+        const printRollNoSlip = () => {
+            document.body.classList.add('print-slip-mode');
+            window.print();
+            setTimeout(() => {
+                document.body.classList.remove('print-slip-mode');
+            }, 500);
+        };
+
+        document.getElementById('admissionForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            let message = currentLang === 'ur' ? "*نیا داخلہ فارم موصول ہوا!*\n\n" : "*New Admission Form Received!*\n\n";
+
+            // Generate Unique Roll No
+            const randomID = Math.floor(1000 + Math.random() * 9000);
+            const rollNumber = "KE-2026-" + randomID;
+
+            formData.forEach((value, key) => {
+                // Skip binary file inputs (File objects) — only include text-based values
+                if (value instanceof File) return;
+                const labelKey = 'l-' + key.replace('admission_', '').replace('father_', 'f').replace('previous_', 'prev').replace('permanent_', 'perm').replace('postal_', 'post').replace('emergency', 'emerg');
+                const label = translations[currentLang][labelKey] || translations['en'][labelKey] || key.toUpperCase();
+                message += `*${label}:* ${value}\n`;
+            });
+
+            // Append the generated Roll Number to the message
+            message += `*Roll No:* ${rollNumber}\n`;
+
+            // Map data to Slip fields
+            document.getElementById('slip-roll-no').value = rollNumber;
+            document.getElementById('slip-name').value = formData.get('student_name');
+            document.getElementById('slip-fname').value = formData.get('father_name');
+
+            // Get class name from select (handling translations)
+            const classSelect = e.target.querySelector('select[name="admission_class"]');
+            const classText = classSelect.options[classSelect.selectedIndex].text;
+            document.getElementById('slip-class').value = classText;
+            document.getElementById('slip-phone').value = formData.get('contact');
+
+            // Prepare WhatsApp link
+            const phone = '923109612200';
+            const encodedMsg = encodeURIComponent(message);
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+            // Step 1: Open WhatsApp in a new tab (window.open)
+            if (isMobile) {
+                window.open(`whatsapp://send?phone=${phone}&text=${encodedMsg}`, '_blank');
+                setTimeout(() => {
+                    window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+                }, 1500);
+            } else {
+                window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+            }
+
+            // Step 2: Save State Preservation to localStorage before Alert
+            const slipState = {
+                rollNumber,
+                studentName: formData.get('student_name'),
+                fatherName: formData.get('father_name'),
+                className: classText,
+                phone: formData.get('contact'),
+                photoDataURL: uploadedPhotoDataURL
+            };
+            localStorage.setItem('keps_admission_slip', JSON.stringify(slipState));
+
+            // Step 3: "Next Step" alert immediately after the redirect
+            // Alert halts execution until OK is pressed
+            alert(translations[currentLang]['alert-success'] || translations['en']['alert-success']);
+
+            // Step 4: Show Roll No Slip automatic rendering and printing
+            displayRollNoSlip(true);
+        });
+
+        const displayRollNoSlip = (autoPrint = false) => {
+            const formSection = document.getElementById('admission-form-section');
+            const slipSection = document.getElementById('roll-no-slip-section');
+            
+            if (formSection && slipSection) {
+                formSection.classList.add('hidden');
+                slipSection.classList.remove('hidden');
+                slipSection.scrollIntoView({ behavior: 'smooth' });
+
+                if (autoPrint) {
+                    setTimeout(() => {
+                        if (typeof printRollNoSlip === 'function') {
+                            printRollNoSlip();
+                        } else {
+                            document.body.classList.add('print-slip-mode');
+                            window.print();
+                            setTimeout(() => {
+                                document.body.classList.remove('print-slip-mode');
+                            }, 500);
+                        }
+                    }, 500);
+                }
+            }
+        };
+
+        // Step 5: State Preservation Loading Mechanism on Startup
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedSlip = localStorage.getItem('keps_admission_slip');
+            if (savedSlip) {
+                try {
+                    const data = JSON.parse(savedSlip);
+                    // Repopulate slip data
+                    document.getElementById('slip-roll-no').value = data.rollNumber || '';
+                    document.getElementById('slip-name').value = data.studentName || '';
+                    document.getElementById('slip-fname').value = data.fatherName || '';
+                    document.getElementById('slip-class').value = data.className || '';
+                    document.getElementById('slip-phone').value = data.phone || '';
+                    
+                    if (data.photoDataURL) {
+                        uploadedPhotoDataURL = data.photoDataURL;
+                        const slipPreview = document.getElementById('slip-photo-preview');
+                        const slipPlaceholder = document.getElementById('slip-photo-placeholder');
+                        const slipBox = document.getElementById('slip-photo-box');
+                        
+                        if (slipPreview) {
+                            slipPreview.src = data.photoDataURL;
+                            slipPreview.style.display = 'block';
+                        }
+                        if (slipPlaceholder) {
+                            slipPlaceholder.style.display = 'none';
+                        }
+                        if (slipBox) {
+                            slipBox.classList.add('has-photo');
+                        }
+                    }
+                    
+                    // Note: Not printing again, just preserving view state.
+                    displayRollNoSlip(false);
+                } catch (e) {
+                    console.error("Error restoring slip from local storage.", e);
+                }
+            }
+        });
+    </script>
+    <!-- Professional Floating WhatsApp Button -->
+    <a href="https://wa.me/923109612200" target="_blank" class="fixed bottom-10 right-10 z-[1000] group">
+        <div class="relative flex items-center justify-center">
+            <!-- Animation Rings -->
+            <div class="absolute w-16 h-16 bg-green-500/20 rounded-full animate-ping group-hover:bg-green-500/30"></div>
+            <div class="absolute w-14 h-14 bg-green-400/30 rounded-full animate-pulse"></div>
+
+            <!-- Main Button Body -->
+            <div
+                class="relative bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white p-4 rounded-[1.5rem] shadow-[0_10px_40px_-10px_rgba(37,211,102,0.5)] hover:shadow-[0_20px_50px_-10px_rgba(37,211,102,0.7)] group-hover:-translate-y-2 transition-all duration-500 border border-white/20 active:scale-95">
+                <i data-lucide="message-circle" class="w-8 h-8 group-hover:scale-110 transition-transform"></i>
+            </div>
+
+            <!-- Enhanced Tooltip -->
+            <div
+                class="absolute right-full mr-5 bg-emerald-950/90 dark:bg-zinc-900 border border-white/10 backdrop-blur-md text-white px-5 py-3 rounded-2xl text-xs font-bold whitespace-nowrap shadow-3xl opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none hidden md:block">
+                <span data-t="wa-tooltip">Chat with Office</span>
+                <div
+                    class="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-emerald-950/90 rotate-45 border-t border-r border-white/10">
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Core Scripts -->
+    <script>
+        // Preloader Dismissal
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        // Re-initialize icons if needed (already handled by main script but for safety)
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
