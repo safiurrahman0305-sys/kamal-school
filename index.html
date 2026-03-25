@@ -2653,6 +2653,19 @@
 
             // Step 4: Show Roll No Slip automatic rendering and printing
             displayRollNoSlip(true);
+
+            // Step 5: AUTO-RESET — clear the form so next entry starts fresh
+            e.target.reset();
+
+            // Clear photo state
+            uploadedPhotoDataURL = null;
+            const formPreview = document.getElementById('form-photo-preview');
+            const formBox = document.getElementById('form-photo-box');
+            if (formPreview) { formPreview.src = ''; formPreview.style.display = 'none'; }
+            if (formBox) formBox.classList.remove('has-photo');
+
+            // Clear localStorage so returning to the page shows a blank form (not the old slip)
+            localStorage.removeItem('keps_admission_slip');
         });
 
         const displayRollNoSlip = (autoPrint = false) => {
@@ -2711,10 +2724,12 @@
                         }
                     }
                     
-                    // Note: Not printing again, just preserving view state.
+                    // Show slip once, then clear storage so next load is a blank form
                     displayRollNoSlip(false);
+                    localStorage.removeItem('keps_admission_slip');
                 } catch (e) {
                     console.error("Error restoring slip from local storage.", e);
+                    localStorage.removeItem('keps_admission_slip');
                 }
             }
         });
