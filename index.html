@@ -2567,18 +2567,51 @@
         };
 
         const downloadSlipPDF = () => {
+            // 1. Target the slip area and its parent section
             const element = document.getElementById('roll-no-slip-area');
-            if (!element) return;
+            const slipSection = document.getElementById('roll-no-slip-section');
 
+            if (!element) {
+                console.error('[KEPS PDF] #roll-no-slip-area not found.');
+                alert('Roll No Slip area not found. Please submit the form first.');
+                return;
+            }
+
+            // 2. Ensure html2pdf library is ready, then generate
             withHtml2Pdf(() => {
+                // Temporarily reveal the section if hidden so html2canvas can capture it
+                const wasHidden = slipSection && slipSection.classList.contains('hidden');
+                if (wasHidden) slipSection.classList.remove('hidden');
+
+                // Hide no-print buttons during capture so they don't appear in the PDF
+                const noPrintEls = element.querySelectorAll('.no-print');
+                noPrintEls.forEach(el => el.style.visibility = 'hidden');
+
                 const opt = {
-                    margin:       [10, 10, 10, 10],
-                    filename:     'Roll_No_Slip_KEPS.pdf',
-                    image:        { type: 'jpeg', quality: 0.98 },
-                    html2canvas:  { scale: 2, useCORS: true, allowTaint: true, logging: false },
-                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                    margin:      [10, 10, 10, 10],
+                    filename:    'Roll_No_Slip.pdf',
+                    image:       { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
+                    jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' }
                 };
-                html2pdf(element, opt);
+
+                // 3. Use the chained API — more reliable than the legacy single-call form
+                html2pdf()
+                    .set(opt)
+                    .from(element)
+                    .save()
+                    .then(() => {
+                        console.log('[KEPS PDF] Roll No Slip PDF generated successfully.');
+                    })
+                    .catch(err => {
+                        console.error('[KEPS PDF] PDF generation failed:', err);
+                        alert('Could not generate PDF. Please try again or use the Print button instead.');
+                    })
+                    .finally(() => {
+                        // Restore original state
+                        noPrintEls.forEach(el => el.style.visibility = '');
+                        if (wasHidden) slipSection.classList.add('hidden');
+                    });
             });
         };
 
