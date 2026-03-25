@@ -15,10 +15,7 @@
     <meta property="og:image" content="images/logo.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- html2pdf.js - PDF Generation Library (loaded before all other scripts) -->
-    <!-- Redundant PDF Library Load for safety -->
-    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -147,8 +144,8 @@
             transition: opacity 0.5s ease;
         }
 
-        /* Official Admission Form Styles (A4 Optimized) */
-        #admission-form-area, #roll-no-slip-area {
+        /* Official Admission Form Styles */
+        #admission-form-area {
             background: white !important;
             color: black !important;
             padding: 30px;
@@ -191,11 +188,7 @@
             gap: 4px;
         }
 
-        .photo-upload-label .upload-icon {
-            font-size: 24px;
-            line-height: 1;
-        }
-
+        .photo-upload-label .upload-icon { font-size: 24px; line-height: 1; }
         .photo-upload-label .upload-hint {
             font-size: 9px;
             font-weight: 800;
@@ -212,30 +205,16 @@
             position: absolute;
             top: 0;
             left: 0;
-            /* Force student photo to always print */
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
         }
 
-        .photo-box-official input[type="file"] {
-            display: none;
-        }
-
-        /* Hide upload UI once photo is selected */
-        .photo-box-official.has-photo .photo-upload-label {
-            display: none;
-        }
-
-        @media print {
-            .photo-upload-label { display: none !important; }
-        }
+        .photo-box-official input[type="file"] { display: none; }
+        .photo-box-official.has-photo .photo-upload-label { display: none; }
 
         .admission-table-official {
             width: 100%;
             border-collapse: collapse;
             border: 2px solid black;
         }
-
         .admission-table-official td {
             border: 2px solid black;
             padding: 12px 15px;
@@ -243,7 +222,6 @@
             color: black !important;
             vertical-align: middle;
         }
-
         .admission-table-official .label-cell {
             font-weight: 800;
             background: #fdfdfd;
@@ -251,16 +229,13 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        /* Visual Consistency: Adjust padding/line-height for taller Urdu font to avoid breaking table layout */
         body.ur-active .admission-table-official td {
             padding: 8px 15px;
             font-size: 14px;
             line-height: normal;
         }
-
-        .admission-table-official input, 
-        .admission-table-official select, 
+        .admission-table-official input,
+        .admission-table-official select,
         .admission-table-official textarea {
             width: 100%;
             background: transparent;
@@ -271,61 +246,31 @@
             font-size: 13px;
         }
 
-        @media print {
-            @page { size: A4; margin: 10mm; } /* کاغذ کے چاروں طرف مناسب جگہ */
-            html, body { 
-                height: auto !important; 
-                overflow: visible !important; 
-                background: white !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                /* رنگوں اور بیک گراؤنڈ کو برقرار رکھنے کے لیے */
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            /* Correct IDs to prevent hiding everything */
-            body > *:not(#admission-form):not(#roll-no-slip-section) { 
-                display: none !important; 
-            }
-            header, nav, footer, .ticker-wrap, .no-print, #preloader, [class*="fixed"], [class*="sticky"] { 
-                display: none !important; 
-            }
-
-            /* Toggle between sections */
-            body:not(.print-slip-mode) #roll-no-slip-section { display: none !important; }
-            body.print-slip-mode #admission-form { display: none !important; }
-
-            #admission-form, #roll-no-slip-section { 
-                display: block !important;
-                position: relative !important;
-                width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                background: white !important;
-                opacity: 1 !important;
-                transform: none !important;
-                visibility: visible !important;
-                /* Ensures form starts exactly at the top and avoids creating blank pages */
-                page-break-before: avoid !important;
-                break-before: avoid !important;
-            }
-            
-            #admission-form-area, #roll-no-slip-area { 
-                border: 2px solid black !important;
-                width: 95% !important;
-                max-width: 190mm !important; /* Slightly narrower for Gutter margin */
-                margin: 0 auto !important;
-                padding: 15px !important; /* Smaller padding to fit on one page */
-                box-sizing: border-box !important;
-                overflow: visible !important;
-                page-break-inside: avoid !important;
-                page-break-after: avoid !important;
-                height: auto !important;
-                position: relative !important;
-                zoom: 0.95; /* Scale down slightly to ensure it fits A4 height */
-            }
-            #admission-form-area *, #roll-no-slip-area * { visibility: visible !important; }
-            .admission-table-official td { padding: 8px 10px !important; } /* Tighter cells */
+        /* Success Message Banner */
+        #form-success-banner {
+            display: none;
+            background: linear-gradient(135deg, #064e3b, #047857);
+            color: #fff;
+            border-radius: 1.5rem;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 20px 50px -10px rgba(4,120,87,0.4);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        #form-success-banner .success-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+        #form-success-banner .success-msg {
+            font-family: 'Jameel Noori Nastaleeq','Noto Nastaliq Urdu',serif;
+            font-size: 1.4rem;
+            line-height: 2.2;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        #form-success-banner .success-msg-en {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            display: block;
         }
 
         .loader-logo {
@@ -1330,20 +1275,18 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="flex flex-wrap justify-center gap-6 mt-12 no-print">
+                <!-- Success Banner (shown after submission) -->
+                <div id="form-success-banner">
+                    <div class="success-icon">✅</div>
+                    <span class="success-msg">فارم کامیابی کے ساتھ جمع ہو گیا ہے۔ شکریہ!</span>
+                    <span class="success-msg-en">Form submitted successfully. Thank you!</span>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 mt-12 no-print" id="form-action-btns">
                     <button type="submit" class="bg-emerald-700 text-white px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-800 transition-all shadow-2xl active:scale-95">
                         <i data-lucide="send" class="w-6 h-6 mr-3"></i>
                         <span data-t="btn-submit">Submit Form</span>
                     </button>
-                    <button type="button" onclick="window.print()" class="bg-gold-500 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-white transition-all shadow-2xl active:scale-95">
-                        <i data-lucide="printer" class="w-6 h-6 mr-3"></i>
-                        <span data-t="btn-print">Print Form</span>
-                    </button>
-                    <button type="button" onclick="downloadAdmissionPDF()" class="bg-white border-2 border-emerald-950 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-50 transition-all shadow-2xl active:scale-95">
-                        <i data-lucide="download" class="w-6 h-6 mr-3"></i>
-                        <span data-t="btn-download-pdf">Download PDF</span>
-                    </button>
-
                 </div>
             </form>
         </div>
@@ -1706,78 +1649,7 @@
 
 
 
-    <!-- Roll No Slip Section (Hidden by default, shown on submission success) -->
-    <section id="roll-no-slip-section" class="py-24 bg-white reveal hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 no-print">
-                <h3 class="text-gold-600 font-bold uppercase tracking-[0.3em] mb-4 text-sm" data-t="roll-badge">Online Entry</h3>
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-emerald-950" data-t="roll-title-main">Roll No Slip</h2>
-                <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
-            </div>
 
-            <div id="roll-no-slip-area">
-                <!-- Flex Header -->
-                <div class="flex justify-between items-start gap-8 mb-8 border-b-2 border-black pb-6">
-                    <div class="w-[110px] invisible no-print hidden md:block"></div>
-                    
-                    <div class="flex-1 text-center">
-                        <h1 class="text-xl md:text-3xl font-black text-black mb-1 uppercase tracking-tighter" data-t="roll-header">KAMAL EVERGREEN PUBLIC SCHOOL</h1>
-                        <h2 class="text-lg md:text-xl font-bold text-black border-b border-black inline-block px-4 pb-1" data-t="roll-title">Roll No Slip</h2>
-                        <div class="flex justify-center mt-4">
-                            <img src="images/logo.jpg" alt="School Logo" class="w-20 h-20 rounded-full border-2 border-black shadow-sm">
-                        </div>
-                    </div>
-
-                    <!-- Photo Box on Roll No Slip (auto-populated from form upload) -->
-                    <div class="photo-box-official" id="slip-photo-box">
-                        <img id="slip-photo-preview" class="photo-preview-img" src="" alt="Student Photo" style="display:none;">
-                        <span id="slip-photo-placeholder" class="upload-hint" data-t="photo-label-official">PASTE STUDENT PHOTO HERE</span>
-                    </div>
-                </div>
-
-                <!-- Slip Table -->
-                <table class="admission-table-official">
-                    <tr>
-                        <td class="label-cell" data-t="l-roll-no">Roll No.</td>
-                        <td><input type="text" id="slip-roll-no" readonly placeholder="[OFFICE USE]" data-t="slip-office"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-cell" data-t="l-name">Student Name:</td>
-                        <td><input type="text" id="slip-name" readonly placeholder="Enter Name" data-t="slip-ph-name"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-cell" data-t="l-fname">Father Name:</td>
-                        <td><input type="text" id="slip-fname" readonly placeholder="Enter Father's Name" data-t="slip-ph-fname"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-cell" data-t="l-class">Class for Admission:</td>
-                        <td><input type="text" id="slip-class" readonly placeholder="Enter Class" data-t="slip-ph-class"></td>
-                    </tr>
-                    <tr>
-                        <td class="label-cell" data-t="l-phone">Contact Number:</td>
-                        <td><input type="text" id="slip-phone" readonly placeholder="Enter Phone" data-t="slip-ph-phone"></td>
-                    </tr>
-                </table>
-
-                <!-- Principal Sign -->
-                <div class="mt-12 text-right">
-                    <p class="font-black text-sm uppercase" data-t="principal-sign">Principal Sign___________</p>
-                </div>
-            </div>
-
-            <!-- Buttons -->
-            <div class="flex flex-wrap justify-center gap-6 mt-12 no-print">
-                <button type="button" onclick="printRollNoSlip()" class="bg-gold-500 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-900 hover:text-white transition-all shadow-2xl active:scale-95">
-                    <i data-lucide="printer" class="w-6 h-6 mr-3"></i>
-                    <span data-t="btn-print-slip">Print Roll No Slip</span>
-                </button>
-                <button type="button" onclick="downloadSlipPDF()" class="bg-white border-2 border-emerald-950 text-emerald-950 px-10 py-5 rounded-2xl font-bold flex items-center hover:bg-emerald-50 transition-all shadow-2xl active:scale-95">
-                    <i data-lucide="download" class="w-6 h-6 mr-3"></i>
-                    <span data-t="btn-download-pdf">Download PDF</span>
-                </button>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-emerald-950 text-white pt-24 pb-12 relative overflow-hidden">
@@ -2477,23 +2349,6 @@
             alert(msgs[currentLang] || msgs.en);
         };
 
-        // --- PDF Helper: ensures html2pdf is loaded then calls the callback ---
-        const withHtml2Pdf = (callback) => {
-            if (window.html2pdf) {
-                callback();
-            } else {
-                const script = document.createElement('script');
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js';
-                script.onload = () => { 
-                    if (window.html2pdf) callback();
-                    else alert('PDF library failed to initialize.');
-                };
-                script.onerror = () => {
-                    alert('PDF library could not be loaded. Please check your internet connection.');
-                };
-                document.head.appendChild(script);
-            }
-        };
 
         // --- Photo Upload Handler ---
         let uploadedPhotoDataURL = null;
@@ -2518,119 +2373,15 @@
                 formPreview.src = uploadedPhotoDataURL;
                 formPreview.style.display = 'block';
                 formBox.classList.add('has-photo');
-
-                // Mirror the same photo to the Roll No Slip photo box
-                const slipPreview = document.getElementById('slip-photo-preview');
-                const slipPlaceholder = document.getElementById('slip-photo-placeholder');
-                const slipBox = document.getElementById('slip-photo-box');
-                slipPreview.src = uploadedPhotoDataURL;
-                slipPreview.style.display = 'block';
-                if (slipPlaceholder) slipPlaceholder.style.display = 'none';
-                slipBox.classList.add('has-photo');
             };
             reader.readAsDataURL(file);
         };
 
-        const downloadAdmissionPDF = () => {
-            const element = document.getElementById('admission-form-area');
-            if (!element) return;
-
-            withHtml2Pdf(() => {
-                const uploadLabel = element.querySelector('.photo-upload-label');
-                if (uploadLabel) uploadLabel.style.display = 'none';
-
-                const opt = {
-                    margin:       [10, 10, 10, 10],
-                    filename:     'Admission_Form_KEPS.pdf',
-                    image:        { type: 'jpeg', quality: 0.98 },
-                    html2canvas:  { 
-                        scale: 2, 
-                        useCORS: true, 
-                        allowTaint: true,
-                        logging: false,
-                        letterRendering: true
-                    },
-                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-                };
-
-                // Added delay to ensure DOM is ready for capture
-                setTimeout(() => {
-                    html2pdf(element, opt).then(() => {
-                        if (uploadLabel) uploadLabel.style.display = '';
-                    }).catch(err => {
-                        console.error('PDF error:', err);
-                        if (uploadLabel) uploadLabel.style.display = '';
-                        alert("Could not generate PDF correctly. Please try clicking the button again.");
-                    });
-                }, 500);
-            });
-        };
-
-        const downloadSlipPDF = () => {
-            // 1. Target the slip area and its parent section
-            const element = document.getElementById('roll-no-slip-area');
-            const slipSection = document.getElementById('roll-no-slip-section');
-
-            if (!element) {
-                console.error('[KEPS PDF] #roll-no-slip-area not found.');
-                alert('Roll No Slip area not found. Please submit the form first.');
-                return;
-            }
-
-            // 2. Ensure html2pdf library is ready, then generate
-            withHtml2Pdf(() => {
-                // Temporarily reveal the section if hidden so html2canvas can capture it
-                const wasHidden = slipSection && slipSection.classList.contains('hidden');
-                if (wasHidden) slipSection.classList.remove('hidden');
-
-                // Hide no-print buttons during capture so they don't appear in the PDF
-                const noPrintEls = element.querySelectorAll('.no-print');
-                noPrintEls.forEach(el => el.style.visibility = 'hidden');
-
-                const opt = {
-                    margin:      [10, 10, 10, 10],
-                    filename:    'Roll_No_Slip.pdf',
-                    image:       { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, useCORS: true, allowTaint: true, logging: false },
-                    jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait' }
-                };
-
-                // 3. Use the chained API — more reliable than the legacy single-call form
-                html2pdf()
-                    .set(opt)
-                    .from(element)
-                    .save()
-                    .then(() => {
-                        console.log('[KEPS PDF] Roll No Slip PDF generated successfully.');
-                    })
-                    .catch(err => {
-                        console.error('[KEPS PDF] PDF generation failed:', err);
-                        alert('Could not generate PDF. Please try again or use the Print button instead.');
-                    })
-                    .finally(() => {
-                        // Restore original state
-                        noPrintEls.forEach(el => el.style.visibility = '');
-                        if (wasHidden) slipSection.classList.add('hidden');
-                    });
-            });
-        };
-
-        const printRollNoSlip = () => {
-            document.body.classList.add('print-slip-mode');
-            window.print();
-            setTimeout(() => {
-                document.body.classList.remove('print-slip-mode');
-            }, 500);
-        };
-
+        // --- Form Submission Handler ---
         document.getElementById('admissionForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
             let message = currentLang === 'ur' ? "*نیا داخلہ فارم موصول ہوا!*\n\n" : "*New Admission Form Received!*\n\n";
-
-            // Generate Unique Roll No
-            const randomID = Math.floor(1000 + Math.random() * 9000);
-            const rollNumber = "KE-2026-" + randomID;
 
             formData.forEach((value, key) => {
                 // Skip binary file inputs (File objects) — only include text-based values
@@ -2640,26 +2391,12 @@
                 message += `*${label}:* ${value}\n`;
             });
 
-            // Append the generated Roll Number to the message
-            message += `*Roll No:* ${rollNumber}\n`;
-
-            // Map data to Slip fields
-            document.getElementById('slip-roll-no').value = rollNumber;
-            document.getElementById('slip-name').value = formData.get('student_name');
-            document.getElementById('slip-fname').value = formData.get('father_name');
-
-            // Get class name from select (handling translations)
-            const classSelect = e.target.querySelector('select[name="admission_class"]');
-            const classText = classSelect.options[classSelect.selectedIndex].text;
-            document.getElementById('slip-class').value = classText;
-            document.getElementById('slip-phone').value = formData.get('contact');
-
             // Prepare WhatsApp link
             const phone = '923109612200';
             const encodedMsg = encodeURIComponent(message);
             const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-            // Step 1: Open WhatsApp in a new tab (window.open)
+            // Open WhatsApp in a new tab so the user stays on the page
             if (isMobile) {
                 window.open(`whatsapp://send?phone=${phone}&text=${encodedMsg}`, '_blank');
                 setTimeout(() => {
@@ -2669,102 +2406,35 @@
                 window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
             }
 
-            // Step 2: Save State Preservation to localStorage before Alert
-            const slipState = {
-                rollNumber,
-                studentName: formData.get('student_name'),
-                fatherName: formData.get('father_name'),
-                className: classText,
-                phone: formData.get('contact'),
-                photoDataURL: uploadedPhotoDataURL
-            };
-            localStorage.setItem('keps_admission_slip', JSON.stringify(slipState));
+            // Show success banner
+            const banner = document.getElementById('form-success-banner');
+            const actionBtns = document.getElementById('form-action-btns');
+            if (banner) {
+                banner.style.display = 'block';
+                banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            if (actionBtns) actionBtns.style.display = 'none';
 
-            // Step 3: "Next Step" alert immediately after the redirect
-            // Alert halts execution until OK is pressed
-            alert(translations[currentLang]['alert-success'] || translations['en']['alert-success']);
+            // Auto-reset: clear form fields and photo after a short delay so user sees the banner
+            setTimeout(() => {
+                e.target.reset();
 
-            // Step 4: Show Roll No Slip automatic rendering and printing
-            displayRollNoSlip(true);
+                // Clear photo state
+                uploadedPhotoDataURL = null;
+                const formPreview = document.getElementById('form-photo-preview');
+                const formBox = document.getElementById('form-photo-box');
+                if (formPreview) { formPreview.src = ''; formPreview.style.display = 'none'; }
+                if (formBox) formBox.classList.remove('has-photo');
 
-            // Step 5: AUTO-RESET — clear the form so next entry starts fresh
-            e.target.reset();
+                // Hide banner and restore submit button after 4 seconds
+                setTimeout(() => {
+                    if (banner) banner.style.display = 'none';
+                    if (actionBtns) actionBtns.style.display = '';
+                }, 4000);
+            }, 500);
 
-            // Clear photo state
-            uploadedPhotoDataURL = null;
-            const formPreview = document.getElementById('form-photo-preview');
-            const formBox = document.getElementById('form-photo-box');
-            if (formPreview) { formPreview.src = ''; formPreview.style.display = 'none'; }
-            if (formBox) formBox.classList.remove('has-photo');
-
-            // Clear localStorage so returning to the page shows a blank form (not the old slip)
+            // Clear any stale localStorage key from previous versions
             localStorage.removeItem('keps_admission_slip');
-        });
-
-        const displayRollNoSlip = (autoPrint = false) => {
-            const formSection = document.getElementById('admission-form');
-            const slipSection = document.getElementById('roll-no-slip-section');
-            
-            if (formSection && slipSection) {
-                formSection.classList.add('hidden');
-                slipSection.classList.remove('hidden');
-                slipSection.scrollIntoView({ behavior: 'smooth' });
-
-                if (autoPrint) {
-                    setTimeout(() => {
-                        if (typeof printRollNoSlip === 'function') {
-                            printRollNoSlip();
-                        } else {
-                            document.body.classList.add('print-slip-mode');
-                            window.print();
-                            setTimeout(() => {
-                                document.body.classList.remove('print-slip-mode');
-                            }, 500);
-                        }
-                    }, 500);
-                }
-            }
-        };
-
-        // Step 5: State Preservation Loading Mechanism on Startup
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedSlip = localStorage.getItem('keps_admission_slip');
-            if (savedSlip) {
-                try {
-                    const data = JSON.parse(savedSlip);
-                    // Repopulate slip data
-                    document.getElementById('slip-roll-no').value = data.rollNumber || '';
-                    document.getElementById('slip-name').value = data.studentName || '';
-                    document.getElementById('slip-fname').value = data.fatherName || '';
-                    document.getElementById('slip-class').value = data.className || '';
-                    document.getElementById('slip-phone').value = data.phone || '';
-                    
-                    if (data.photoDataURL) {
-                        uploadedPhotoDataURL = data.photoDataURL;
-                        const slipPreview = document.getElementById('slip-photo-preview');
-                        const slipPlaceholder = document.getElementById('slip-photo-placeholder');
-                        const slipBox = document.getElementById('slip-photo-box');
-                        
-                        if (slipPreview) {
-                            slipPreview.src = data.photoDataURL;
-                            slipPreview.style.display = 'block';
-                        }
-                        if (slipPlaceholder) {
-                            slipPlaceholder.style.display = 'none';
-                        }
-                        if (slipBox) {
-                            slipBox.classList.add('has-photo');
-                        }
-                    }
-                    
-                    // Show slip once, then clear storage so next load is a blank form
-                    displayRollNoSlip(false);
-                    localStorage.removeItem('keps_admission_slip');
-                } catch (e) {
-                    console.error("Error restoring slip from local storage.", e);
-                    localStorage.removeItem('keps_admission_slip');
-                }
-            }
         });
     </script>
     <!-- Professional Floating WhatsApp Button -->
